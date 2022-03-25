@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #divtopbar {
+            height: 34px;
+            background-color: rgb(124, 173, 213);
+            text-align: center;
+            line-height: 34px;
+            color: white;
+            font-weight: bolder;
+            font-size: 16px;
+        }
+
+        #atopbar {
+            margin-left: 10px;
+            color: white;
+            font-size: 13.9341px;
+        }
+    </style>
+    <style>
+        /* gnb 1depth */
+        #header {
+            text-align: center;
+            line-height: 80px;
+        }
+
+        #header ul#gnb1Depth {
+            width: 100%;
+            height: 80px;
+        }
+
+        #header ul#gnb1Depth > li {
+            display: inline-block;
+            
+        }
+
+        #header ul#gnb1Depth li.liLogo{
+            margin-right: 1%;
+        }
+        
+        #header ul#gnb1Depth li.liLogo img.logo {
+            height: 16px;
+            width: 103.25px;
+        }
+        
+        #header ul#gnb1Depth > li.liGnb1Depth > a{
+            font-size: 14px;
+            color: black;
+            font-weight: bold;
+            padding: 9px 12px;
+            border-radius: 20px;
+            text-decoration: none;
+        }
+
+        #header ul#gnb1Depth > li.liGnb1DepthLast {
+            margin-right: 15%;
+        }
+
+    </style>
+    <style>
+        div#test {
+            width: 100%;
+            height: 0px;
+            background-color: antiquewhite;
+            transition: 0.5s;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="divtopbar">
+        봄맞이 특가 세일! 함께 뭉치면 최대49% 할인! <a id="atopbar" href="#">공동구매하기</a>
+    </div>
+    <div id="header">
+        <ul id="gnb1Depth">
+            <li class="liLogo"><a href="#"><img class="logo" src="https://www.samsung.com/sec/static/_images/common/logo_samsung_black.svg"></a></li>
+            <li class="liGnb1Depth"><a href="#">제품</a></li>
+            <li class="liGnb1Depth"><a href="#">기회전</a></li>
+            <li class="liGnb1Depth"><a href="#">큐커 식품관</a></li>
+            <li class="liGnb1Depth"><a href="#">스토리</a></li>
+            <li class="liGnb1Depth"><a href="#">고객 서비스</a></li>
+            <li class="liGnb1Depth"><a href="#">맴버십</a></li>
+            <li class="liGnb1Depth"><a href="#">디지털프라자<img src="https://www.samsung.com/sec/static/_images/common/icon-locationinfo.svg"></a></li>
+            <li class="liGnb1Depth"><a href="#">사회공헌<img src="https://www.samsung.com/sec/static/_images/common/icon-outlink.svg"></a></li>
+            <li class="liGnb1Depth liGnb1DepthLast"><a href="#">비지니스<img src="https://www.samsung.com/sec/static/_images/common/icon-outlink.svg"></a></li>
+            <li class="liAsideNav"><a href="#"><img src="https://www.samsung.com/sec/static/_images/common/icon-zoom.svg"></a></li>
+            <li class="liAsideNav"><a href="#"><img src="https://www.samsung.com/sec/static/_images/common/icon-cart.svg"></a></li>
+            <li class="liAsideNav"><a href="#"><img src="https://www.samsung.com/sec/static/_images/common/icon-people.svg"></a></li>
+        </ul>
+    </div>
+    <div id="test">
+        <div id="test2">
+            blablalbal
+        </div>
+    </div>
+    <script>
+        var navOpenClose = false;
+        $(".liGnb1Depth").hover(openNav, closeNav);
+        $("#header").hover(openNav, closeNav);
+
+
+
+        function openNav() {
+            document.getElementById("test").style.height = "500px";
+            navOpenClose = true;
+        };
+
+        function closeNav() {
+            document.getElementById("test").style.height = "0";
+            navOpenClose = false;
+        };
+
+        function openNavHeader() {
+            if(navOpenClose) {
+                openNav();
+            }   
+        };
+
+        function closeNavHeader() {
+            if(!navOpenClose) {
+                closeNav();
+            }
+        };
+    </script>
+</body>
+
+</html>

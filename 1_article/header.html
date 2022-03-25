@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #divtopbar {
+            height: 34px;
+            background-color: rgb(124, 173, 213);
+            text-align: center;
+            line-height: 34px;
+            color: white;
+            font-weight: bolder;
+            font-size: 16px;
+        }
+
+        #atopbar {
+            margin-left: 10px;
+            color: white;
+            font-size: 13.9341px;
+        }
+    </style>
+    <style>
+        /* gnb 1depth */
+        #header {
+            text-align: center;
+            line-height: 80px;
+        }
+
+        #header #divWidthHeight {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        #header ul.gnb1Depth {
+            display: inline-block;
+        }
+
+        #header ul#gnb1DepthLogo {
+            float:left;
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+
+        #header div#gnb1DepthDiv {
+            display: inline-block;
+            text-align: left;
+            width: 70%;
+        }
+
+        #header ul#gnb1DepthNav {
+            font-size: 0;
+        }
+
+        #header ul#gnb1DepthAside {
+            float: right;
+        }
+
+        #header ul.gnb1Depth > li {
+            display: inline-block;
+        }
+        
+        #header ul.gnb1Depth li.liLogo img.logo {
+            height: 16px;
+            width: 103.25px;
+        }
+
+        #header ul.gnb1Depth > li.liGnb1Depth > a{
+            font-size: 14px;
+            color: black;
+            font-weight: bold;
+            padding: 0 15px;
+            border-radius: 20px;
+            text-decoration: none;
+        }
+
+    </style>
+    <style>
+        div#gnb2DepthDiv {
+            width: 100%;
+            height: 0px;
+            transition: 0.5s;
+            overflow: hidden;
+        }
+    </style>
+    <style>
+        #gnb2DepthDiv div.gnb2Depth {
+            position: relative;
+            display: none;
+            width: 80%;
+            background-color: white;
+            margin: 0 auto;
+        }
+
+        #gnb2DepthDiv li.gnb2DepthLi{
+            list-style: none;
+            font-size: 18px;
+            height: 40px;
+            line-height: 40px;
+        }
+    </style>
+    <style>
+        .gnb3Depth {
+            display: none;
+            position: absolute;
+            left: 15%;
+            top: 0%;
+            width: 50%;
+        }
+
+        .gnb3DepthLi {
+            list-style: none;
+            font-size: 18px;
+            height: 40px;
+            line-height: 40px;
+        }
+    </style>
+    <style>
+        .gnb4Depth {
+            display: none;
+            position: absolute;
+            left: 40%;
+            top: 0;
+        }
+
+        .gnb4Depth li {
+            list-style: none;
+        }
+    </style>
+    <style>
+        .gnb5Depth {
+            display: none;
+            position: absolute;
+            left: 70%;
+            top:0%;
+        }
+
+        .gnb5DepthImg {
+            width: 330px;
+            height: 330px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="divtopbar">
+        봄맞이 특가 세일! 함께 뭉치면 최대49% 할인! <a id="atopbar" href="#">공동구매하기</a>
+    </div>
+    <div id="headerWrap">
+        <div id="header">
+            <div id="divWidthHeight">
+                <ul class="gnb1Depth" id="gnb1DepthLogo">
+                    <li class="liLogo"><a href="#"><img class="logo" src="https://www.samsung.com/sec/static/_images/common/logo_samsung_black.svg"></a></li>
+                </ul>
+                <div id="gnb1DepthDiv">
+                    <ul class="gnb1Depth" id="gnb1DepthNav">
+                        <li class="liGnb1Depth"><a href="#">제품</a></li>
+                        <li class="liGnb1Depth"><a href="#">기획전</a></li>
+                        <li class="liGnb1Depth"><a href="#">큐커 식품관</a></li>
+                        <li class="liGnb1Depth"><a href="#">스토리</a></li>
+                        <li class="liGnb1Depth"><a href="#">고객 서비스</a></li>
+                        <li class="liGnb1Depth"><a href="#">맴버십</a></li>
+                        <li class="liGnb1Depth"><a href="#">디지털프라자<img src="https://www.samsung.com/sec/static/_images/common/icon-locationinfo.svg"></a></li>
+                        <li class="liGnb1Depth"><a href="#">사회공헌<img src="https://www.samsung.com/sec/static/_images/common/icon-outlink.svg"></a></li>
+                        <li class="liGnb1Depth liGnb1DepthLast"><a href="#">비지니스<img src="https://www.samsung.com/sec/static/_images/common/icon-outlink.svg"></a></li>
+                    </ul>
+                </div>
+                <ul class="gnb1Depth" id="gnb1DepthAside">
+                    <li class="liAsideNav"><a href="#"><img src="https://www.samsung.com/sec/static/_images/common/icon-zoom.svg"></a></li>
+                    <li class="liAsideNav"><a href="#"><img src="https://www.samsung.com/sec/static/_images/common/icon-cart.svg"></a></li>
+                    <li class="liAsideNav"><a href="#"><img src="https://www.samsung.com/sec/static/_images/common/icon-people.svg"></a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="gnb2DepthDiv">
+            <div class="gnb2Depth">
+                <ul class="gnb2DepthUl">
+                    <li class="gnb2DepthLi">신제품</li>
+                    <li class="gnb2DepthLi">공동구매</li>
+                    <li class="gnb2DepthLi">모바일</li>
+                    <li class="gnb2DepthLi">TV&오디오</li>
+                    <li class="gnb2DepthLi">BESPOKE</li>
+                    <li class="gnb2DepthLi">주방가전</li>
+                    <li class="gnb2DepthLi">생활가전</li>
+                    <li class="gnb2DepthLi">PC/주변기기</li>
+                    <li class="gnb2DepthLi">스마트홈</li>
+                    <li class="gnb2DepthLi">소모품</li>
+                </ul>
+                <div class="gnb3Depth">
+
+                </div>
+                <div class="gnb3Depth">
+                    <ul class="gnb3DepthUl">
+                        <li class="gnb3DepthLi">바로가기</li>
+                    </ul>
+                </div>
+                <div class="gnb3Depth">
+                    <ul class="gnb3DepthUl">
+                        <li class="gnb3DepthLi">갤럭시의 모든 것</li>
+                        <li class="gnb3DepthLi">스마트폰
+                            <div class="gnb4Depth">
+                                <ul class="gnb4DepthUl">
+                                    <li class="gnb4DepthLi">추천 스마트폰</li>
+                                    <li class="gnb4DepthLi">전체 스마트폰</li>
+                                    <li class="gnb4DepthLi">갤럭시Z</li>
+                                    <li class="gnb4DepthLi">갤럭시S</li>
+                                    <li class="gnb4DepthLi">갤럭시A</li>
+                                    <li class="gnb4DepthLi">갤럭시M</li>
+                                    <li class="gnb4DepthLi">액세서리</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="gnb3DepthLi">태블릿
+                            <div class="gnb4Depth">
+                                <ul class="gnb4DepthUl">
+                                    <li class="gnb4DepthLi">추천 태블릿</li>
+                                    <li class="gnb4DepthLi">전체 태블릿</li>
+                                    <li class="gnb4DepthLi">갤럭시 탭 S</li>
+                                    <li class="gnb4DepthLi">갤럭시 탭 A</li>
+                                    <li class="gnb4DepthLi">액세서리</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="gnb3DepthLi">갤럭시 북
+                            <div class="gnb4Depth">
+                                <ul class="gnb4DepthUl">
+                                    <li class="gnb4DepthLi">추천 갤럭시 북</li>
+                                    <li class="gnb4DepthLi">전체 갤럭시 북</li>
+                                    <li class="gnb4DepthLi">갤럭시 북 Pro 360</li>
+                                    <li class="gnb4DepthLi">갤럭시 북 Pro</li>
+                                    <li class="gnb4DepthLi">갤럭시 북 Flex</li>
+                                    <li class="gnb4DepthLi">갤럭시 북 Ion</li>
+                                    <li class="gnb4DepthLi">갤럭시 북 S</li>
+                                    <li class="gnb4DepthLi">노트북 Plus</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="gnb3DepthLi">워치
+                            <div class="gnb4Depth">
+                                <ul class="gnb4DepthUl">
+                                    <li class="gnb4DepthLi">추천 워치</li>
+                                    <li class="gnb4DepthLi">전체 워치</li>
+                                    <li class="gnb4DepthLi">갤럭시 워치4</li>
+                                    <li class="gnb4DepthLi">갤럭시 워치4 비스포크 스튜디오</li>
+                                    <li class="gnb4DepthLi">갤럭시 핏</li>
+                                    <li class="gnb4DepthLi">액세서리</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="gnb3DepthLi">버즈
+                            <div class="gnb4Depth">
+                                <ul class="gnb4DepthUl">
+                                    <li class="gnb4DepthLi">추천 버즈</li>
+                                    <li class="gnb4DepthLi">전체 버즈</li>
+                                    <li class="gnb4DepthLi">갤럭시 버즈 프로</li>
+                                    <li class="gnb4DepthLi">갤럭시 버즈 라이브</li>
+                                    <li class="gnb4DepthLi">갤럭시 버즈2</li>
+                                    <li class="gnb4DepthLi">갤럭시 버즈 커버</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="gnb3DepthLi">모바일 액세서리
+                            <div class="gnb4Depth">
+                                <ul class="gnb4DepthUl">
+                                    <li class="gnb4DepthLi">전체 액세서리</li>
+                                    <li class="gnb4DepthLi">갤럭시 스마트태그</li>
+                                    <li class="gnb4DepthLi">스마트폰 액세서리</li>
+                                    <li class="gnb4DepthLi">태블릿 액세서리</li>
+                                    <li class="gnb4DepthLi">워치 액세서리</li>
+                                    <li class="gnb4DepthLi">태블릿 액세서리</li>
+                                    <li class="gnb4DepthLi">워치 액세서리</li>
+                                    <li class="gnb4DepthLi">버즈 액세서리</li>
+                                    <li class="gnb4DepthLi">갤럭시 커스텀 스튜디오</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="gnb3DepthLi">체험존
+                            <div class="gnb4Depth">
+                                <ul class="gnb4DepthUl">
+                                    <li class="gnb4DepthLi">갤럭시 S22 | 갤럭시 탭 S8</li>
+                                    <li class="gnb4DepthLi">갤럭시 Z | 갤럭시 워치4 | 갤럭시 버즈2</li>
+                                    <li class="gnb4DepthLi">갤럭시 스튜디오</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="gnb3DepthLi">One UI
+                            <div class="gnb4Depth">
+                                <ul class="gnb4DepthUl">
+                                    <li class="gnb4DepthLi">One UI 알아보기</li>
+                                    <li class="gnb4DepthLi">앱&서비스 알아보기</li>
+                                    <li class="gnb4DepthLi">Samsung Care+</li>
+                                    <li class="gnb4DepthLi">갤럭시 스토어</li>
+                                    <li class="gnb4DepthLi">빅스비</li>
+                                    <li class="gnb4DepthLi">삼성페이</li>
+                                    <li class="gnb4DepthLi">삼성 헬스 모니터</li>
+                                    <li class="gnb4DepthLi">Samsung Dex</li>
+                                    <li class="gnb4DepthLi">Samsung Members</li>
+                                    <li class="gnb4DepthLi">My 갤럭시 플랜</li>
+                                    <li class="gnb4DepthLi">트레이드인</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="gnb3DepthLi">추천 콘텐츠
+                            <div class="gnb4Depth">
+                                <ul class="gnb4DepthUl">
+                                    <li class="gnb4DepthLi">갤럭시 S22 Ultra 제품 정보</li>
+                                    <li class="gnb4DepthLi">갤럭시 S22 | S22+ 제품 정보</li>
+                                    <li class="gnb4DepthLi">갤럭시 A53 구매 혜택</li>
+                                    <li class="gnb4DepthLi">갤럭시 탭 S8 시리즈 제품 정보</li>
+                                    <li class="gnb4DepthLi">갤럭시 비스포크</li>
+                                    <li class="gnb4DepthLi">갤럭시 Z 폴드3 제품 정보</li>
+                                    <li class="gnb4DepthLi">갤럭시 Z 플립3 제품 정보</li>
+                                    <li class="gnb4DepthLi">갤럭시 워치4 시리즈 제품 정보</li>
+                                    <li class="gnb4DepthLi">갤럭시 버즈2 제품 정보</li>
+                                    <li class="gnb4DepthLi">갤럭시 스튜디오</li>
+                                    <li class="gnb4DepthLi">한눈에 보는 수상 제품</li>
+                                    <li class="gnb4DepthLi">한눈에 보는 제품 영상</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="gnb3DepthLi">갤럭시가 특별한 이유</li>
+                    </ul>
+                </div>
+                <div class="gnb3Depth">
+                    <ul class="gnb3DepthUl">
+                        <li class="gnb3DepthLi">MiCRO LED</li>
+                        <li class="gnb3DepthLi">TV
+                            <div class="gnb4Depth">
+                                <ul class="gnb4DepthUl">
+                                    <li class="gnb4DepthLi">추천 TV</li>
+                                    <li class="gnb4DepthLi">전체 TV</li>
+                                    <li class="gnb4DepthLi">Neo QLED 8K</li>
+                                    <li class="gnb4DepthLi">Neo QLED 4K</li>
+                                    <li class="gnb4DepthLi">QLED 8K</li>
+                                    <li class="gnb4DepthLi">QLED 4K</li>
+                                    <li class="gnb4DepthLi">Crystal UHD</li>
+                                    <li class="gnb4DepthLi">액세서리</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="gnb3DepthLi">Lifestyle TV
+                            <div class="gnb4Depth">
+                                <ul class="gnb4DepthUl">
+                                    <li class="gnb4DepthLi">추천 Lifestyle TV</li>
+                                    <li class="gnb4DepthLi">전체 Lifestyle TV</li>
+                                    <li class="gnb4DepthLi">The Freestyle</li>
+                                    <li class="gnb4DepthLi">The Serif</li>
+                                    <li class="gnb4DepthLi">The Frame</li>
+                                    <li class="gnb4DepthLi">The Premiere</li>
+                                    <li class="gnb4DepthLi">The Sero</li>
+                                    <li class="gnb4DepthLi">The Terrace</li>
+                                    <li class="gnb4DepthLi">액세서리</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="gnb3DepthLi">삼성 사운드바
+                            <div class="gnb4Depth">
+                                <ul class="gnb4DepthUl">
+                                    <li class="gnb4DepthLi">추천 삼성 사운드바</li>
+                                    <li class="gnb4DepthLi">전체 삼성 사운드바</li>
+                                    <li class="gnb4DepthLi">Q시리즈 사운드바</li>
+                                    <li class="gnb4DepthLi">S시리즈 사운드바</li>
+                                    <li class="gnb4DepthLi">T시리즈 사운드바</li>
+                                    <li class="gnb4DepthLi">A시리즈 사운드바</li>
+                                    <li class="gnb4DepthLi">일반 사운드바</li>
+                                    <li class="gnb4DepthLi">사운드타워</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="gnb3DepthLi">라이프스타일 오디오
+                            <div class="gnb4Depth">
+                                <ul class="gnb4DepthUl">
+                                    <li class="gnb4DepthLi">추천 라이프스타일 오디오</li>
+                                    <li class="gnb4DepthLi">전체 라이프스타일 오디오</li>
+                                    <li class="gnb4DepthLi">JBL</li>
+                                    <li class="gnb4DepthLi">harman/kardon</li>
+                                    <li class="gnb4DepthLi">AKG</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="gnb3DepthLi">하이엔드 오디오
+                            <div class="gnb4Depth">
+                                <ul class="gnb4DepthUl">
+                                    <li class="gnb4DepthLi">추천 하이엔드 오디오</li>
+                                    <li class="gnb4DepthLi">Mark Levinson</li>
+                                    <li class="gnb4DepthLi">JBL SYNTHESIS</li>
+                                    <li class="gnb4DepthLi">ARCAM</li>
+                                    <li class="gnb4DepthLi">REVEL</li>
+                                    <li class="gnb4DepthLi">LEXICON</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="gnb3DepthLi">추천 콘텐츠
+                            <div class="gnb4Depth">
+                                <ul class="gnb4DepthUl">
+                                    <li class="gnb4DepthLi">The Serif 제품 정보</li>
+                                    <li class="gnb4DepthLi">The Frame 제품 정보</li>
+                                    <li class="gnb4DepthLi">한눈에 보는 수상 제품</li>
+                                    <li class="gnb4DepthLi">한눈에 보는 제품 영상</li>
+                                    <li class="gnb4DepthLi">커진 화면만큼 커지는 감동</li>
+                                    <li class="gnb4DepthLi">구매전 꼭 알아야 할 TV의 모든 것</li>
+                                    <li class="gnb4DepthLi">스마트 TV에 인텔리전트를 더하다</li>
+                                    <li class="gnb4DepthLi">극강의 서라운드 Q시리즈 사운드바</li>
+                                    <li class="gnb4DepthLi">오디오 스마트 추천 더 알아보기</li>
+                                    <li class="gnb4DepthLi">노이즈 캔슬링 제품 전문 리뷰</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="gnb3Depth">
+                    <ul class="gnb3DepthUl">
+                        <li class="gnb3DepthLi">BESPOKE 제작소 AI<img class="imgnew" src="https://image.useinsider.com/samsungkr/defaultImageLibrary/NEW_TAG-1645061167.png"></li>
+                        <li class="gnb3DepthLi">BESPOKE 냉장고/김치냉장고</li>
+                        <li class="gnb3DepthLi">BESPOKE 정수기</li>
+                        <li class="gnb3DepthLi">BESPOKE 식기세척기</li>
+                        <li class="gnb3DepthLi">BESPOKE 인덕션</li>
+                        <li class="gnb3DepthLi">BESPOKE 오븐/전자레인지/큐커</li>
+                        <li class="gnb3DepthLi">BESPOKE 그랑데 AI</li>
+                        <li class="gnb3DepthLi">BESPOKE 에어드레서/슈드레서</li>
+                        <li class="gnb3DepthLi">BESPOKE 무풍에어컨</li>
+                        <li class="gnb3DepthLi">BESPOKE 큐브&trade; Air</li>
+                        <li class="gnb3DepthLi">BESPOKE 제트/제트 봇/슬림</li>
+                    </ul>BESPOKE 
+                </div>
+                <div class="gnb3Depth">
+                    <ul class="gnb3DepthUl">
+                        <li class="gnb3DepthLi">냉장고
+                            <div class="gnb4Depth">
+                                <ul class="gnb4DepthUl">
+                                    <li class="gnb4DepthLi">추천 냉장고</li>
+                                    <li class="gnb4DepthLi">전체 냉장고</li>
+                                    <li class="gnb4DepthLi">BESPOKE 냉장고 Infinite Line</li>
+                                    <li class="gnb4DepthLi">BESPOKE 냉장고</li>
+                                    <li class="gnb4DepthLi">BESPOKE 냉장고 패밀리허브</li>
+                                    <li class="gnb4DepthLi">BESPOKE 큐브 냉장고</li>
+                                    <li class="gnb4DepthLi">양문형 냉장고</li>
+                                    <li class="gnb4DepthLi">일반 냉장고</li>
+                                    <li class="gnb4DepthLi">업소용 냉장고</li>
+                                    <li class="gnb4DepthLi">액세서리</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="gnb3DepthLi">김치냉장고
+                            <div class="gnb4Depth">
+                                <ul class="gnb4DepthUl">
+                                    <li class="gnb4DepthLi">추천 김치냉장고</li>
+                                    <li class="gnb4DepthLi">전체 김치냉장고</li>
+                                    <li class="gnb4DepthLi">BESPOKE 김치플러스 Infinite Line</li>
+                                    <li class="gnb4DepthLi">BESPOKE 김치플러스</li>
+                                    <li class="gnb4DepthLi">김치플러스 스탠드형</li>
+                                    <li class="gnb4DepthLi">김치플러스 뚜껑형</li>
+                                    <li class="gnb4DepthLi">액세서리</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="gnb3DepthLi">정수기
+                            <div class="gnb4Depth">
+                                <ul class="gnb4DepthUl">
+                                    <li class="gnb4DepthLi">추천 정수기</li>
+                                    <li class="gnb4DepthLi">전체 정수기</li>
+                                    <li class="gnb4DepthLi">액세서리</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="gnb3DepthLi">식기세척기
+                            <div class="gnb4Depth">
+                                <ul class="gnb4DepthUl">
+                                    <li class="gnb4DepthLi">추천 식기세척기</li>
+                                    <li class="gnb4DepthLi">전체 식기세척기</li>
+                                    <li class="gnb4DepthLi">BESPOKE 식기세척기 Infinite Line</li>
+                                    <li class="gnb4DepthLi">BESPOKE 식기세척기</li>
+                                    <li class="gnb4DepthLi">일반 식기세척기</li>
+                                    <li class="gnb4DepthLi">액세서리</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="gnb3DepthLi">전기레인지
+                            <div class="gnb4Depth">
+                                <ul class="gnb4DepthUl">
+                                    <li class="gnb4DepthLi">추천 전기레인지</li>
+                                    <li class="gnb4DepthLi">전체 전기레인지</li>
+                                    <li class="gnb4DepthLi">셰프컬렉션 인덕션</li>
+                                    <li class="gnb4DepthLi">BESPOKE 인덕션</li>
+                                    <li class="gnb4DepthLi">인덕션</li>
+                                    <li class="gnb4DepthLi">더 플레이트 인덕션</li>
+                                    <li class="gnb4DepthLi">하이브리드</li>
+                                    <li class="gnb4DepthLi">라디언트</li>
+                                    <li class="gnb4DepthLi">액세서리</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="gnb3DepthLi">오븐/전자레인지
+                            <div class="gnb4Depth">
+                                <ul class="gnb4DepthUl">
+                                    <li class="gnb4DepthLi">추천 오븐/전자레인지</li>
+                                    <li class="gnb4DepthLi">전체 오브/전자레인지</li>
+                                    <li class="gnb4DepthLi">BESPOKE 오븐 Infinite Line</li>
+                                    <li class="gnb4DepthLi">BESPOKE 오븐</li>
+                                    <li class="gnb4DepthLi">BESPOKE 전기레인지</li>
+                                    <li class="gnb4DepthLi">일반 전기레인지</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="gnb3DepthLi">큐커
+                            <div class="gnb4Depth">
+                                <ul class="gnb4DepthUl">
+                                    <li class="gnb4DepthLi">추천 큐커</li>
+                                    <li class="gnb4DepthLi">전체 큐커</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="gnb3DepthLi">빌트인 가전
+                            <div class="gnb4Depth">
+                                <ul class="gnb4DepthUl">
+                                    <li class="gnb4DepthLi">전체 빌트인 가전</li>
+                                    <li class="gnb4DepthLi">셰프컬렉션 빌트인</li>
+                                    <li class="gnb4DepthLi">빌트인 냉장고</li>
+                                    <li class="gnb4DepthLi">빌트인 전기레인지</li>
+                                    <li class="gnb4DepthLi">빌트인 식기세척기</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="gnb3DepthLi">주방가전 액세서리
+                            <div class="gnb4Depth">
+                                <ul class="gnb4DepthUl">
+                                    <li class="gnb4DepthLi">전체 주방가전 액세서리</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="gnb3DepthLi">Samsung Care+</li>
+                        <li class="gnb3DepthLi">추천콘텐츠
+                            <div class="gnb4Depth">
+                                <ul class="gnb4DepthUl">
+                                    <li class="gnb4DepthLi">한눈에 보는 수상 제품</li>
+                                    <li class="gnb4DepthLi">한눈에 보는 제품 영상</li>
+                                    <li class="gnb4DepthLi">신선함을 그대로 건강함을 그대로</li>
+                                    <li class="gnb4DepthLi">나를 행복하게 만드는 쉬운 요리</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="gnb3Depth">
+                    <ul class="gnb3DepthUl">
+                        <li class="gnb3DepthLi">세탁기
+                            <div class="gnb4Depth">
+                                <ul class="gnb4DepthUl">
+                                    <li class="gnb4DepthLi">추천 세탁기</li>
+                                    <li class="gnb4DepthLi">전체 세탁기</li>
+                                    <li class="gnb4DepthLi">BESPOKE 그랑데 세탁기 AI</li>
+                                    <li class="gnb4DepthLi">그랑데 세탁기 AI</li>
+                                    <li class="gnb4DepthLi">그랑데 세탁기</li>
+                                    <li class="gnb4DepthLi">드럼 세탁기</li>
+                                    <li class="gnb4DepthLi">그랑데 통버블/전자동</li>
+                                    <li class="gnb4DepthLi">소형 세탁기</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="gnb3DepthLi">건조기
+                            <div class="gnb4Depth">
+                                <ul class="gnb4DepthUl">
+                                    <li class="gnb4DepthLi">추천 건조기</li>
+                                    <li class="gnb4DepthLi">전체 건조기</li>
+                                    <li class="gnb4DepthLi">BESPOKE 그랑데 건조기 AI</li>
+                                    <li class="gnb4DepthLi">그랑데 건조기 AI</li>
+                                    <li class="gnb4DepthLi">그랑데 건조기</li>
+                                    <li class="gnb4DepthLi">건조기 9kg</li>
+                                    <li class="gnb4DepthLi">상단 설치 키트</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="gnb3DepthLi">에어드레서
+                            <div class="gnb4Depth">
+                                <ul class="gnb4DepthUl">
+                                    <li class="gnb4DepthLi">추천 에어드레서</li>
+                                    <li class="gnb4DepthLi">전체 에어드레서</li>
+                                    <li class="gnb4DepthLi">BESPOKE 에어드레서</li>
+                                    <li class="gnb4DepthLi">에어드레서</li>
+                                    <li class="gnb4DepthLi">액세서리</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="gnb3DepthLi">슈드레서
+                            <div class="gnb4Depth">
+                                <ul class="gnb4DepthUl">
+                                    <li class="gnb4DepthLi">추천 슈드레서</li>
+                                    <li class="gnb4DepthLi">전체 슈드레서</li>
+                                    <li class="gnb4DepthLi">BESPOKE 슈드레서</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="gnb3DepthLi">에어컨
+                            <div class="gnb4Depth">
+                                <ul class="gnb4DepthUl">
+                                    <li class="gnb4DepthLi">추천 에어컨</li>
+                                    <li class="gnb4DepthLi">전체 에어컨</li>
+                                    <li class="gnb4DepthLi">홈멀티 에어컨</li>
+                                    <li class="gnb4DepthLi">스탠드 에어컨</li>
+                                    <li class="gnb4DepthLi">벽걸이 에어컨</li>
+                                    <li class="gnb4DepthLi">창문형 에어컨</li>
+                                    <li class="gnb4DepthLi">액세서리</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="gnb3DepthLi">공기청정기
+                            <div class="gnb4Depth">
+                                <ul class="gnb4DepthUl">
+                                    <li class="gnb4DepthLi">추천 공기청정기</li>
+                                    <li class="gnb4DepthLi">전체 공기청정기</li>
+                                    <li class="gnb4DepthLi">BESPOKE 큐브&trade; Air</li>
+                                    <li class="gnb4DepthLi">무풍큐브</li>
+                                    <li class="gnb4DepthLi">블루스카이</li>
+                                    <li class="gnb4DepthLi">필터</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="gnb3DepthLi">청소기
+                            <div class="gnb4Depth">
+                                <ul class="gnb4DepthUl">
+                                    <li class="gnb4DepthLi">추천 청소기</li>
+                                    <li class="gnb4DepthLi">전체 청소기</li>
+                                    <li class="gnb4DepthLi">BESPOKE 제트</li>
+                                    <li class="gnb4DepthLi">BESPOKE 제트 봇</li>
+                                    <li class="gnb4DepthLi">BESPOKE 슬림</li>
+                                    <li class="gnb4DepthLi">제트</li>
+                                    <li class="gnb4DepthLi">파워봇</li>
+                                    <li class="gnb4DepthLi">파워스틱</li>
+                                    <li class="gnb4DepthLi">파워모션</li>
+                                    <li class="gnb4DepthLi">액세서리</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="gnb3DepthLi">시스템에어컨<img src="https://www.samsung.com/sec/static/_images/common/icon-outlink.svg"></li>
+                        <li class="gnb3DepthLi">소형가전
+                            <div class="gnb4Depth">
+                                <ul class="gnb4DepthUl">
+                                    <li class="gnb4DepthLi">전체 소형가전</li>
+                                    <li class="gnb4DepthLi">스마트빔</li>
+                                    <li class="gnb4DepthLi">비데</li>
+                                    <li class="gnb4DepthLi">디지털 도어록</li>
+                                    <li class="gnb4DepthLi">LED 데스크 램프</li>
+                                    <li class="gnb4DepthLi">선풍기</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="gnb3DepthLi">LED 조명
+                            <div class="gnb4Depth">
+                                <ul class="gnb4DepthUl">
+                                    <li class="gnb4DepthLi">전체 LED 조명</li>
+                                    <li class="gnb4DepthLi">홈 LED(거실/방등)</li>
+                                    <li class="gnb4DepthLi">홈 LED(주방/욕실등)</li>
+                                    <li class="gnb4DepthLi">홈 LED(현관/복도등)</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="gnb3DepthLi">생활가전 액세서리
+                            <div class="gnb4Depth">
+                                <ul class="gnb4DepthUl">
+                                    <li class="gnb4DepthLi">전체 생활가전 액세서리</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="gnb3DepthLi">Samsung Care+</li>
+                    </ul>
+                </div>
+                <div class="gnb3Depth">
+                    <ul class="gnb3DepthUl">
+                        <li class="gnb3DepthLi">PC
+                            <div class="gnb4Depth">
+                                <ul class="gnb4DepthUl">
+                                    <li class="gnb4DepthLi">추천 PC</li>
+                                    <li class="gnb4DepthLi">갤럭시 북</li>
+                                    <li class="gnb4DepthLi">데스크탑</li>
+                                    <li class="gnb4DepthLi">PC 액세서리</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="gnb3DepthLi">모니터
+                            <div class="gnb4Depth">
+                                <ul class="gnb4DepthUl">
+                                    <li class="gnb4DepthLi">추천 모니터</li>
+                                    <li class="gnb4DepthLi">전체 모니터</li>
+                                    <li class="gnb4DepthLi">고해상도 모니터</li>
+                                    <li class="gnb4DepthLi">스마트 모니터</li>
+                                    <li class="gnb4DepthLi">게이밍 모니터</li>
+                                    <li class="gnb4DepthLi">일반 모니터</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="gnb3DepthLi">프린터
+                            <div class="gnb4Depth">
+                                <ul class="gnb4DepthUl">
+                                    <li class="gnb4DepthLi">추천 프린터</li>
+                                    <li class="gnb4DepthLi">전체 프린터</li>
+                                    <li class="gnb4DepthLi">레이저 프린터</li>
+                                    <li class="gnb4DepthLi">잉크젯 프린터</li>
+                                    <li class="gnb4DepthLi">토너/잉크</li>
+                                    <li class="gnb4DepthLi">토너/잉크 찾아보기</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="gnb3DepthLi">메모리/스토리지
+                            <div class="gnb4Depth">
+                                <ul class="gnb4DepthUl">
+                                    <li class="gnb4DepthLi">추천 메모리/스토리지</li>
+                                    <li class="gnb4DepthLi">전체 메모리/스토리지</li>
+                                    <li class="gnb4DepthLi">SSD</li>
+                                    <li class="gnb4DepthLi">포터블 SSD</li>
+                                    <li class="gnb4DepthLi">메모리카드</li>
+                                    <li class="gnb4DepthLi">USB Flash Drive</li>
+                                    <li class="gnb4DepthLi">외장 HDD</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="gnb3DepthLi">추천 콘텐츠
+                            <div class="gnb4Depth">
+                                <ul class="gnb4DepthUl">
+                                    <li class="gnb4DepthLi">한눈에 보는 수상 제품</li>
+                                    <li class="gnb4DepthLi">한눈에 보는 제품 영상</li>
+                                    <li class="gnb4DepthLi">스마트모니터로 여는 새로운 라이프스타일</li>
+                                    <li class="gnb4DepthLi">모든 일상을 만족시킬 스마트모니터</li>
+                                    <li class="gnb4DepthLi">오디세이 원정대의 모험</li>
+                                    <li class="gnb4DepthLi">게이밍 모니터 Odyssey</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="gnb3Depth">
+                    <ul class="gnb3DepthUl">
+                        <li class="gnb3DepthLi">추천 스마트홈</li>
+                        <li class="gnb3DepthLi">스마트싱스 파트너 제품</li>
+                        <li class="gnb3DepthLi">스마트싱스 앱&서비스</li>
+                        <li class="gnb3DepthLi">스마트싱스 홈 라이프</li>
+                    </ul>
+                </div>
+                <div class="gnb3Depth">
+                    <ul class="gnb3DepthUl">
+                        <li class="gnb3DepthLi">전체 소모품</li>
+                        <li class="gnb3DepthLi">스마트폰 소모품</li>
+                        <li class="gnb3DepthLi">공기청정기 소모품</li>
+                        <li class="gnb3DepthLi">에어컨 소모품</li>
+                        <li class="gnb3DepthLi">세탁기 소모품</li>
+                        <li class="gnb3DepthLi">건조기/에어드레서 소모품</li>
+                        <li class="gnb3DepthLi">냉장고 소모품</li>
+                        <li class="gnb3DepthLi">청소기 소모품</li>
+                        <li class="gnb3DepthLi">프린터 소모품</li>
+                    </ul>
+                </div>
+                <div class="gnb3Depth">
+
+                </div>
+                <div class="gnb3Depth">
+
+                </div>
+                <div class="gnb3Depth">
+
+                </div>
+                <div class="gnb3Depth">
+
+                </div>
+                <div class="gnb3Depth">
+
+                </div>
+                <div class="gnb5Depth">
+
+                </div>
+                <div class="gnb5Depth">
+                    <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/aa875b86-a852-45a4-a143-1528f11b7ea9.jpg?$ORIGIN_JPG$">
+                </div>
+                <div class="gnb5Depth">
+                    <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/8e2f3e36-0332-45c4-87b1-1419fe01f615.jpg?$ORIGIN_JPG$">
+                </div>
+                <div class="gnb5Depth">
+                    <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/81c7f31d-0021-4a02-9e6a-06087c9a5701.jpg?$ORIGIN_JPG$">
+                </div>
+                <div class="gnb5Depth">
+                    <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/87e4b057-5bab-445f-8f84-ed9bf4506f98.jpg?$ORIGIN_JPG$">
+                </div>
+                <div class="gnb5Depth">
+                    <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/326c5d47-17e3-47bb-89cf-512fb3d43c7d.jpg?$ORIGIN_JPG$">
+                </div>
+                <div class="gnb5Depth">
+                    <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/55d9dc9b-a4d1-44a9-a63d-7329a6192024.jpg?$ORIGIN_JPG$">
+                </div>
+                <div class="gnb5Depth">
+                    <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/f2ead5e7-ff13-481c-a634-949edf66f508.jpg?$ORIGIN_JPG$">
+                </div>
+                <div class="gnb5Depth">
+                    <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/25e5b827-51ef-47f0-9d76-f5982d86a89d.jpg?$ORIGIN_JPG$">
+                </div>
+                <div class="gnb5Depth">
+                    <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/14de5e3e-dd1f-43ef-b340-d33066ba6dcb.jpg?$ORIGIN_JPG$">
+                </div>
+                    
+            </div>
+            <div class="gnb2Depth">
+                <ul class="gnb2DepthUl">
+                    <li class="gnb2DepthLi">신제품</li>
+                    <li class="gnb2DepthLi">공동구매</li>
+                    <li class="gnb2DepthLi">모바일</li>
+                    <li class="gnb2DepthLi">TV&오디오</li>
+                    <li class="gnb2DepthLi">BESPOKE</li>
+                    <li class="gnb2DepthLi">주방가전</li>
+                    <li class="gnb2DepthLi">생활가전</li>
+                    <li class="gnb2DepthLi">PC/주변기기</li>
+                    <li class="gnb2DepthLi">스마트홈</li>
+                    <li class="gnb2DepthLi">소모품</li>
+                </ul>
+            </div>
+            <div class="gnb2Depth">
+
+            </div>
+            <div class="gnb2Depth">
+
+            </div>
+            <div class="gnb2Depth">
+
+            </div>
+            <div class="gnb2Depth">
+
+            </div>
+        </div>
+    </div>
+    <script>
+        navOpenClose = false;
+
+        $("#gnb1DepthNav").mouseenter(openNav);
+        // $("#gnb1DepthNav").mouseleave(closeNav);
+        $("#header").mouseenter(openNavHeader);
+        // $("#header").mouseleave(closeNav);
+        // $("#gnb2DepthDiv").mouseenter(openNav);
+        // $("#gnb2DepthDiv").mouseleave(closeNav);
+        $("#headerWrap").mouseleave(closeNav);
+
+        $(".liGnb1Depth").mouseenter(function(){
+            var liIndex = $(this).index();
+            // console.log("test:" + divIndex);
+            for(var i in $(".gnb2Depth")){
+                if(i == liIndex) {
+                    $(".gnb2Depth").eq(i).css("display", "block");
+                }
+                else {
+                    $(".gnb2Depth").eq(i).css("display", "none");
+                }
+            }
+        });
+
+        $(".gnb2DepthLi").mouseenter(function(){
+            var liIndex = $(this).index();
+            var parent = $(this).parents(1)[1];
+            for(var i in $(parent).children(".gnb3Depth")){
+                if(i == liIndex) {
+                    $(parent).children(".gnb3Depth").eq(i).css("display","block");
+                }
+                else {
+                    $(parent).children(".gnb3Depth").eq(i).css("display","none");
+                }
+            }
+            for(var i in $(parent).children(".gnb5Depth")){
+                if(i == liIndex) {
+                    $(parent).children(".gnb5Depth").eq(i).css("display","block");
+                }
+                else {
+                    $(parent).children(".gnb5Depth").eq(i).css("display","none");
+                }
+            }
+        });
+
+        $(".gnb3DepthLi").mouseenter(function(){
+            console.log($(this).children().eq(0));
+            $(this).children().eq(0).css("display","block");
+        });
+
+        $(".gnb3DepthLi").mouseleave(function(){
+            console.log($(this).children().eq(0));
+            $(this).children().eq(0).css("display","none");
+        });
+
+        function openNav() {
+            document.getElementById("gnb2DepthDiv").style.height = "500px";
+            navOpenClose = true;
+            // console.log(navOpenClose);
+        };
+
+        function closeNav() {
+            document.getElementById("gnb2DepthDiv").style.height = "0";
+            navOpenClose = false;
+        };
+
+        function openNavHeader() {
+            if(navOpenClose) {
+                document.getElementById("gnb2DepthDiv").style.height = "500px";
+            }
+        };
+    </script>
+</body>
+
+</html>

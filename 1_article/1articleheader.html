@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin:0;
+            padding: 0;
+        }
+    </style>
+    <style>
+        ul, li {
+            list-style: none;
+            background-color: antiquewhite;
+        }
+
+        ul {
+            padding-left: 0;
+        }
+
+        .divheader {
+            position: relative;
+        }
+    </style>
+    <style>
+        #header .divheader {
+            height: 80px;
+        }
+        #header div.logo {
+            position: relative;
+            float: left;
+            height: 100%;
+            width: 103.26px;
+        }
+
+        #header img.logo {
+            height: 16px;
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            transform: translate(0%, -50%);
+        }
+    </style>
+    <style>
+        #header .gnb>ul {
+            float: left;
+            height: 100%;
+            margin: 0;
+        }
+
+        #header .gnb > ul > li {
+            float: left;
+            height: 80px;
+            line-height: 80px;
+            padding-right: 12px;
+        }
+
+        #header .gnb ul.gnb2depth{
+            height: 600px;
+        }
+
+        #header .gnb ul.gnb2depth > li {
+            line-height: 40px;
+        }
+
+        #header .gnb ul.gnb2depth {
+            display: none;
+            position: absolute;
+            top: 80px;
+            left: 0px;
+            width: 200px;
+        }
+
+        #header .gnb ul.gnb3depth {
+            display: none;
+            position: absolute;
+            top: 0px;
+            left: 200px;
+            width: 200px;
+        }
+
+        #header .gnb table.gnb3depth {
+            display: none;
+            position: absolute;
+            top: 0px;
+            left: 200px;
+        }
+
+        #header .gnb ul.gnb1depth li.lignb1depth:hover ul.gnb2depth {
+            display: block;
+        }
+
+        #header .gnb ul.gnb2depth li.lignb2depth:hover ul.gnb3depth {
+            display: block;
+        }
+
+        #header .gnb ul.gnb2depth li.lignb2depth:nth-child(1):hover table.gnb3depth {
+            display: block;
+        }
+    </style>
+    
+    <style>
+        #divtopbar {
+            height: 34px;
+            background-color: rgb(124,173,213);
+            text-align: center;
+            line-height: 34px;
+            color: white;
+            font-weight: bolder;
+            font-size: 16px;
+        }
+        #atopbar {
+            margin-left: 10px;
+            color: white;
+            font-size: 13.9341px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="divtopbar">
+        봄맞이 특가 세일! 함께 뭉치면 최대49% 할인! <a id="atopbar" href="#">공동구매하기</a>
+    </div>
+    <header id="header">
+        <div class="divheader">
+            <div class="logo">
+                <img class="logo" src="https://www.samsung.com/sec/static/_images/common/logo_samsung_black.svg" alt="centerd image">
+            </div>
+            <nav class="gnb">
+                <ul class="gnb1depth">
+                    <li class="lignb1depth">제품
+                        <div class="divgnb2depth">
+                            <ul class="gnb2depth">
+                                <li class="lignb2depth">신제품
+                                    <div class="divgnb3depth">
+                                        <table class="gnb3depth">
+                                            <tr>
+                                                <td rowspan="2" colspan="2">
+                                                    <img src="https://images.samsung.com/kdp/display/gnb/b3245d74-e0e0-4da1-bd32-20c8d57e02e7.jpg?$ORIGIN_JPG$">
+                                                </td>
+                                                <td>
+                                                    <img src="https://images.samsung.com/kdp/display/gnb/dc865d61-dc88-4e9c-8c56-f077015410c0.jpg?$ORIGIN_JPG$">
+                                                </td>
+                                                <td>
+                                                    <img src="https://images.samsung.com/kdp/display/gnb/194d55f0-6383-4d84-ac36-2b56e24b46d3.png?$ORIGIN_JPG$">
+                                                </td>
+                                                <td>
+                                                    <img src="https://images.samsung.com/kdp/display/gnb/f7ec319e-9834-4559-8635-87b12f70ac8d.jpg?$ORIGIN_JPG$">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <img src="https://images.samsung.com/kdp/display/gnb/cf7f1877-37cf-4f5f-9532-5eb7ccdf9a3f.png?$ORIGIN_JPG$">
+                                                </td>
+                                                <td>
+                                                    <img src="https://images.samsung.com/kdp/display/gnb/0e65615a-2264-4c98-848e-995eae98667b.png?$ORIGIN_JPG$">
+                                                </td>
+                                                <td>
+                                                    <img src="https://images.samsung.com/kdp/display/gnb/ce5249dc-6c8c-494d-86b8-e318675c245a.jpg?$ORIGIN_JPG$">
+                                                </td>
+                                                <td></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </li>
+                                <li class="lignb2depth">공동구매
+                                    <div class="divgnb3depth">
+                                        <ul class="gnb3depth">
+                                            <li class="lignb3depth">바로가기</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="lignb2depth">모바일
+                                    <div class="divgnb3depth">
+                                        <ul class="gnb3depth">
+                                            <li class="lignb3depth">갤럭시의 모든 것</li>
+                                            <li class="lignb3depth">스마트폰</li>
+                                            <li class="lignb3depth">태블릿</li>
+                                            <li class="lignb3depth">갤럭시 북</li>
+                                            <li class="lignb3depth">워치</li>
+                                            <li class="lignb3depth">버즈</li>
+                                            <li class="lignb3depth">모바일 액세서리</li>
+                                            <li class="lignb3depth">체험존</li>
+                                            <li class="lignb3depth">One UI</li>
+                                            <li class="lignb3depth">추천 콘텐츠</li>
+                                            <li class="lignb3depth">갤럭시가 특별한 이유</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="lignb2depth">TV&오디오
+                                    <div class="divgnb3depth">
+                                        <ul class="gnb3depth">
+                                            <li class="lignb3depth">MICRO LED</li>
+                                            <li class="lignb3depth">TV</li>
+                                            <li class="lignb3depth">Lifestyle TV</li>
+                                            <li class="lignb3depth">삼성 사운드바</li>
+                                            <li class="lignb3depth">라이프스타일 오디오</li>
+                                            <li class="lignb3depth">하이엔드 오디오</li>
+                                            <li class="lignb3depth">추천 콘텐츠</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="lignb2depth">BESPOKE
+                                    <div class="divgnb3depth">
+                                        <ul class="gnb3depth">
+                                            <li class="lignb3depth">BESPKE 제작소<img class="imgnew" src="https://image.useinsider.com/samsungkr/defaultImageLibrary/NEW_TAG-1645061167.png"></li>
+                                            <li class="lignb3depth">BESPOKE 냉장고/김치냉장고</li>
+                                            <li class="lignb3depth">BESPOKE 정수기</li>
+                                            <li class="lignb3depth">BESPOKE 식기세척기</li>
+                                            <li class="lignb3depth">BESPOKE 인덕션</li>
+                                            <li class="lignb3depth">BESPOKE 오븐/전자레인지/큐커</li>
+                                            <li class="lignb3depth">BESPOKE 그랑데 AI</li>
+                                            <li class="lignb3depth">BESPOKE 에어드레서/슈드레서</li>
+                                            <li class="lignb3depth">BESPOKE 무풍에어컨</li>
+                                            <li class="lignb3depth">BESPOKE 큐브&trade; Air</li>
+                                            <li class="lignb3depth">BESPOKE 제트/제트 봇/슬림</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="lignb2depth">주방가전
+                                    <div class="divgnb3depth">
+                                        <ul class="gnb3depth">
+                                            <li class="lignb3depth">냉장고</li>
+                                            <li class="lignb3depth">김치냉장고</li>
+                                            <li class="lignb3depth">정수기</li>
+                                            <li class="lignb3depth">식기세척기</li>
+                                            <li class="lignb3depth">전기레인지</li>
+                                            <li class="lignb3depth">오븐/전자레인지</li>
+                                            <li class="lignb3depth">큐커</li>
+                                            <li class="lignb3depth">빌트인 가전</li>
+                                            <li class="lignb3depth">주방가전 액세서리</li>
+                                            <li class="lignb3depth">Samsung Care+</li>
+                                            <li class="lignb3depth">추천 콘텐츠</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="lignb2depth">생활가전
+                                    <div class="divgnb3depth">
+                                        <ul class="gnb3depth">
+                                            <li class="lignb3depth">세탁기</li>
+                                            <li class="lignb3depth">건조기</li>
+                                            <li class="lignb3depth">에어드레서</li>
+                                            <li class="lignb3depth">슈드레서</li>
+                                            <li class="lignb3depth">에어컨</li>
+                                            <li class="lignb3depth">공기청정기</li>
+                                            <li class="lignb3depth">시스템 에어컨<img src="https://www.samsung.com/sec/static/_images/common/icon-outlink.svg"></li>
+                                            <li class="lignb3depth">소형가전</li>
+                                            <li class="lignb3depth">LED 조명</li>
+                                            <li class="lignb3depth">생활가전 액세서리</li>
+                                            <li class="lignb3depth">Samsung care+</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="lignb2depth">PC/주변기기
+                                    <div class="divgnb3depth">
+                                        <ul class="gnb3depth">
+                                            <li class="lignb3depth">PC</li>
+                                            <li class="lignb3depth">모니터</li>
+                                            <li class="lignb3depth">프린터</li>
+                                            <li class="lignb3depth">메모리/스토리지</li>
+                                            <li class="lignb3depth">추천 콘텐츠</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="lignb2depth">스마트홈
+                                    <div class="divgnb3depth">
+                                        <ul class="gnb3depth">
+                                            <li class="lignb3depth">추천 스마트홈</li>
+                                            <li class="lignb3depth">스마트싱스 파트너 제품</li>
+                                            <li class="lignb3depth">스마트싱스 앱 & 서비스</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="lignb2depth">소모품
+                                    <div class="divgnb3depth">
+                                        <ul class="gnb3depth">
+                                            <li class="lignb3depth">전체 소모품</li>
+                                            <li class="lignb3depth">스마트폰 소모품</li>
+                                            <li class="lignb3depth">공기청정기 소모품</li>
+                                            <li class="lignb3depth">에어컨 소모품</li>
+                                            <li class="lignb3depth">세탁기 소모품</li>
+                                            <li class="lignb3depth">건조기/에어드레서 소모품</li>
+                                            <li class="lignb3depth">냉장고 소모품</li>
+                                            <li class="lignb3depth">청소기 소모품</li>
+                                            <li class="lignb3depth">프린터 소모품</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="lignb1depth">기획전
+                        <div class="divgnb2depth">
+                            <ul class="gnb2depth">
+                                <li class="lignb2depth">기획전 모두보기
+                                    <div class="divgnb3depth">
+                                        <ul class="gnb3depth">
+                                            <li class="lignb3depth">바로가기</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="lignb2depth">삼성닷컴 단독
+                                    <div class="divgnb3depth">
+                                        <ul class="gnb3depth">
+                                            <li class="lignb3depth">바로가기</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="lignb2depth">공동구매
+                                    <div class="divgnb3depth">
+                                        <ul class="gnb3depth">
+                                            <li class="lignb3depth">바로가기</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="lignb2depth">웨딩 ∙ 신혼샵
+                                    <div class="divgnb3depth">
+                                        <ul class="gnb3depth">
+                                            <li class="lignb3depth">바로가기</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="lignb2depth">갤럭시 캠퍼스 스토어
+                                    <div class="divgnb3depth">
+                                        <ul class="gnb3depth">
+                                            <li class="lignb3depth">바로가기</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="lignb2depth">아울렛
+                                    <div class="divgnb3depth">
+                                        <ul class="gnb3depth">
+                                            <li class="lignb3depth">바로가기</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="lignb2depth">혜택존
+                                    <div class="divgnb3depth">
+                                        <ul class="gnb3depth">
+                                            <li class="lignb3depth">닷컴 회원 혜택</li>
+                                            <li class="lignb3depth">포인트 혜택</li>
+                                            <li class="lignb3depth">카드 혜택</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="lignb2depth">이벤트존
+                                    <div class="divgnb3depth">
+                                        <ul class="gnb3depth">
+                                            <li class="lignb3depth">모두보기</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="lignb2depth">홈 피트니스
+                                    <div class="divgnb3depth">
+                                        <ul class="gnb3depth">
+                                            <li class="lignb3depth">바로가기</li>
+                                            <li class="lignb3depth">구독 서비스</li>
+                                            <li class="lignb3depth">프로그램</li>
+                                            <li class="lignb3depth">나의 홈 피트니스</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="lignb2depth">삼성닷컴 Live
+                                    <div class="divgnb3depth">
+                                        <ul class="gnb3depth">
+                                            <li class="lignb3depth">바로가기</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="lignb2depth">MD 초이스 샵
+                                    <div class="divgnb3depth">
+                                        <ul class="gnb3depth">
+                                            <li class="lignb3depth">MD 초이스 샵 모두 보기</li>
+                                            <li class="lignb3depth">소형가전 핫딜</li>
+                                            <li class="lignb3depth">프리미엄 브랜드</li>
+                                            <li class="lignb3depth">가전 액세서리</li>
+                                            <li class="lignb3depth">모바일/IT 액세서리</li>
+                                            <li class="lignb3depth">아이디어 상품</li>
+                                            <li class="lignb3depth">스마트싱스 파트너 제품</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="lignb2depth">갤럭시 커스텀 스튜디오
+                                    <div class="divgnb3depth">
+                                        <ul class="gnb3depth">
+                                            <li class="lignb3depth">바로가기</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="lignb1depth">큐커 식품관
+                        <div class="divgnb2depth">
+                            <ul class="gnb2depth">
+                                <li class="lignb2depth">큐커 시품관
+                                    <div class="divgnb3depth">
+                                        <ul class="gnb3depth">
+                                            <li class="lignb3depth">바로가기</li>
+                                            <li class="lignb3depth">스캔쿡 레시피</li>
+                                            <li class="lignb3depth">밀키트</li>
+                                            <li class="lignb3depth">간편식</li>
+                                            <li class="lignb3depth">가공식품</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="lignb2depth">My 큐커 플랜 맴버십
+                                    <div class="divgnb3depth">
+                                        <ul class="gnb3depth">
+                                            <li class="lignb3depth">바로가기</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="lignb2depth">식품 브랜드
+                                    <div class="divgnb3depth">
+                                        <ul class="gnb3depth">
+                                            <li class="lignb3depth">CJ제일제당</li>
+                                            <li class="lignb3depth">hy</li>
+                                            <li class="lignb3depth">대상</li>
+                                            <li class="lignb3depth">동원</li>
+                                            <li class="lignb3depth">랭킹닭컴</li>
+                                            <li class="lignb3depth">마이셰프</li>
+                                            <li class="lignb3depth">소울키친</li>
+                                            <li class="lignb3depth">신세계푸드</li>
+                                            <li class="lignb3depth">앙트레</li>
+                                            <li class="lignb3depth">오뚜기</li>
+                                            <li class="lignb3depth">오픈더테이블</li>
+                                            <li class="lignb3depth">캐비아</li>
+                                            <li class="lignb3depth">데이스티나인</li>
+                                            <li class="lignb3depth">풀무원</li>
+                                            <li class="lignb3depth">프레시지</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="lignb1depth">스토리
+                        <div class="divgnb2depth">
+                            <ul class="gnb2depth">
+                                <li class="lignb2depth">추천 스토리
+                                    <div class="divgnb3depth">
+                                        <ul class="gnb3depth">
+                                            <li class="lignb3depth">스토리 HOME</li>
+                                            <li class="lignb3depth">사진 & 영상 TIP</li>
+                                            <li class="lignb3depth">엔터테인먼트</li>
+                                            <li class="lignb3depth">건강</li>
+                                            <li class="lignb3depth">다양한 활용</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="lignb2depth">큐레이션#
+                                    <div class="divgnb3depth">
+                                        <ul class="gnb3depth">
+                                            <li class="lignb3depth">#The Perfect Gift</li>
+                                            <li class="lignb3depth">#Our Planet First</li>
+                                            <li class="lignb3depth">#Work From Home</li>
+                                            <li class="lignb3depth">#Game On</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="lignb2depth">브랜드
+                                    <div class="divgnb3depth">
+                                        <ul class="gnb3depth">
+                                            <li class="lignb3depth">Samsung Within</li>
+                                            <li class="lignb3depth">Galaxy Collaboration Story</li>
+                                            <li class="lignb3depth">Beyond the Limits</li>
+                                            <li class="lignb3depth">The Serif 디자인 스토리</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="lignb2depth">전시 행사
+                                    <div class="divgnb3depth">
+                                        <ul class="gnb3depth">
+                                            <li class="lignb3depth">Samsung at CES 2022</li>
+                                            <li class="lignb3depth">The Voyage Sets sail</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="lignb2depth">커뮤니티</li>
+                                <div class="divgnb3depth">
+                                    <ul class="gnb3depth">
+                                        <li class="lignb3depth">삼성멤버스 커뮤니티<img src="https://www.samsung.com/sec/static/_images/common/icon-outlink.svg"></li>
+                                    </ul>
+                                </div>
+                                <li class="lignb2depth">#YouMake 프로젝트
+                                    <div class="divgnb3depth">
+                                        <ul class="gnb3depth">
+                                            <li class="lignb3depth">바로가기</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="lignb1depth">고객 서비스
+                        <div class="divgnb2depth">
+                            <ul class="gnb2depth">
+                                <li class="lignb2depth">무엇을 도와드릴까요?
+                                    <div class="divgnb3depth">
+                                        <ul class="gnb3depth">
+                                            <li class="lignb3depth">무엇을 도와드릴까요?</li>
+                                            <li class="lignb3depth">스스로 해결<img src="https://www.samsung.com/sec/static/_images/common/icon-outlink.svg"></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="lignb2depth">제품 지원
+                                    <div class="divgnb3depth">
+                                        <ul class="gnb3depth">
+                                            <li class="lignb3depth">메뉴얼 & 다운로드</li>
+                                            <li class="lignb3depth">동영상 가이드<img src="https://www.samsung.com/sec/static/_images/common/icon-outlink.svg"></li>
+                                            <li class="lignb3depth">이메일 상담</li>
+                                            <li class="lignb3depth">원격 상담<img src="https://www.samsung.com/sec/static/_images/common/icon-outlink.svg"></li>
+                                            <li class="lignb3depth">전화 상담 예약<img src="https://www.samsung.com/sec/static/_images/common/icon-outlink.svg"></li>
+                                            <li class="lignb3depth">컴퓨터 온라인 상담<img src="https://www.samsung.com/sec/static/_images/common/icon-outlink.svg"></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="lignb2depth">추천 부가정보
+                                    <div class="divgnb3depth">
+                                        <ul class="gnb3depth">
+                                            <li class="lignb3depth">고객 서비스 알림</li>
+                                            <li class="lignb3depth">워런티</li>
+                                            <li class="lignb3depth">삼성닷컴 FAQ</li>
+                                            <li class="lignb3depth">삼성멤버스 커뮤니티<img src="https://www.samsung.com/sec/static/_images/common/icon-outlink.svg"></li>
+                                            <li class="lignb3depth">갤럭시 배터리</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="lignb2depth">서비스 센터
+                                    <div class="divgnb3depth">
+                                        <ul class="gnb3depth">
+                                            <li class="lignb3depth">서비스센터 찾기</li>
+                                            <li class="lignb3depth">출장 서비스 예약<img src="https://www.samsung.com/sec/static/_images/common/icon-outlink.svg"></li>
+                                            <li class="lignb3depth">제품 문의<img src="https://www.samsung.com/sec/static/_images/common/icon-outlink.svg"></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="lignb2depth">Samsung Care+
+                                    <div class="divgnb3depth">
+                                        <ul class="gnb3depth">
+                                            <li class="lignb3depth">모바일/PC</li>
+                                            <li class="lignb3depth">가전/TV</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="lignb1depth">맴버십
+                        <div class="divgnb2depth">
+                            <ul class="gnb2depth">
+                                <li class="lignb2depth">멤버십 가이드
+                                    <div class="divgnb3depth">
+                                        <ul class="gnb3depth">
+                                            <li class="lignb3depth">삼성전자 멤버십 소개</li>
+                                            <li class="lignb3depth">가입 안내</li>
+                                            <li class="lignb3depth">포인트 안내</li>
+                                            <li class="lignb3depth">등급 & 혜택 안내</li>
+                                            <li class="lignb3depth">블루케어 서비스 안내</li>
+                                            <li class="lignb3depth">혼수 혜택 안내</li>
+                                            <li class="lignb3depth">블루패키지 안내</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="lignb1depth">디지털프라자<img src="https://www.samsung.com/sec/static/_images/common/icon-locationinfo.svg">
+                        <div class="divgnb2depth">
+                            <ul class="gnb2depth">
+                                <li class="lignb2depth">디지털프라자
+                                    <div class="divgnb3depth">
+                                        <ul class="gnb3depth">
+                                            <li class="lignb3depth">디지털프라자 Home</li>
+                                            <li class="lignb3depth">언텍트 쇼핑 안내</li>
+                                            <li class="lignb3depth">이벤트</li>
+                                            <li class="lignb3depth">신규 오픈 매장</li>
+                                            <li class="lignb3depth">매장 찾기</li>
+                                            <li class="lignb3depth">매장 상담 예약</li>
+                                            <li class="lignb3depth">VR스토어<img src="https://www.samsung.com/sec/static/_images/common/icon-outlink.svg"></li>
+                                            <li class="lignb3depth">BESPOKE 홈 메타<img src="https://www.samsung.com/sec/static/_images/common/icon-outlink.svg"></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+</body>
+
+</html>
