@@ -6,7 +6,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <title>Document</title>
+    <!-- <link href="./css/reset.css" rel="stylesheet"> -->
+    <title>Samsung</title>
+    <style>
+        .textBold {
+            font-weight: bold;
+        }
+        .textFontSize30px {
+            font-size: 30px;
+        }
+        .textFontSize18px {
+            font-size: 18px;
+            padding-bottom: 18px;
+        }
+        .textFontSize14px {
+            font-size: 14px;
+        }
+        .textFontSize12px {
+            font-size: 12px;
+        }
+        .textUnderLine {
+            text-decoration: underline;
+        }
+        .marginBottom18px {
+            margin-bottom: 18px;
+        }
+        .borderRadius30px {
+            border-radius: 30px;
+        }
+    </style>
     <style>
         * {
             margin: 0;
@@ -30,6 +58,13 @@
         }
     </style>
     <style>
+        #headerWrap {
+            width: 100%;
+            background-color: white;
+            position: absolute;
+            top: 34px;
+            z-index: 2;
+        }
         /* gnb 1depth */
         #header {
             text-align: center;
@@ -94,6 +129,7 @@
             height: 0px;
             transition: 0.5s;
             overflow: hidden;
+            z-index: 1;
         }
     </style>
     <style>
@@ -143,6 +179,13 @@
             line-height: 40px;
         }
 
+        img#imgnew {
+            height: 20px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
         div.gnb3DepthLiArrowDiv {
             /* display: none; */
             position: absolute;
@@ -155,6 +198,20 @@
             position: absolute;
             top: 50%;
             transform: translateY(50%);
+        }
+        table.gnb3depth {
+            border-spacing: 20px;
+        }
+        .gnb3DepthTableDiv {
+            position: relative;
+            text-align: center;
+        }
+        .gnb3DepthTextarea {
+            position:absolute;
+            width: 100%;
+            top: 65%;
+            left: 50%;
+            transform: translateX(-50%);
         }
     </style>
     <style>
@@ -172,9 +229,22 @@
     <style>
         .gnb5Depth {
             display: none;
+            height: 600px;
             position: absolute;
-            left: 70%;
+            left: 65%;
             top:0%;
+            padding-left: 50px;
+            border-left: solid 1px #ddd;
+        }
+
+        .borderNone {
+            border-left: none;
+        }
+
+        .gnb5DepthImgDiv {
+            border-radius: 10%;
+            overflow: hidden;
+            margin-bottom: 10px;
         }
 
         .gnb5DepthImg {
@@ -193,17 +263,103 @@
             top: 110%;
             display:block;
             content: '';
-            border-bottom: solid 3px #ea2129;
+            border-bottom: solid 1px black;
             transform: scaleX(0);  
             transition: transform 250ms ease-in-out;
+        }
+    </style>
+
+    <!-- section -->
+    <link rel="stylesheet" href="./section4.css">
+    <link rel="stylesheet" href="./section5.css">
+    <link rel="stylesheet" href="./section6.css">
+    <style>
+        section{
+            width: 100%; margin: 0 auto; 
+            z-index: 0;
+        }
+    </style>
+    <style>
+        #dummyDiv {
+            width: 100%;
+            height: 86px;
+        }
+
+        #dummyMask {
+            display: none;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0px;
+            z-index: 1;
+            background-color: black;
+            opacity: 0.6;
+        }
+    </style>
+    <style>
+        footer .footerTable {
+            width: 100%;
+            border-top: solid 1px #ddd;
+            border-bottom: solid 1px #ddd;
+        }
+        td.contentTd {
+            width: 15%;
+        }
+        td.contentTd:nth-of-type(2) {
+            width: 30%;
+        }
+
+    </style>
+    <style>
+        table.footerContentTable {
+            width: 100%;
+            border-spacing: 20px;
+            border-left: solid 1px #ddd;
+        }
+        table.footerContentTable th{
+            text-align: left;
+        }
+    </style>
+    <style>
+        footer .footerDiv {
+            color: #555;
+            padding: 20px 5%;
+            border-bottom: solid 1px #ddd;
+        }
+        footer .footerDiv p {
+            margin: 7px;
+        }
+    </style>
+    <style>
+        footer .footerLast {
+            padding: 20px 5%;
+            height: 50px;
+        }
+        footer .footerLast p{
+            height: 50px;
+        }
+        footer .footerLast p.floatLeft {
+            font-weight: bold;
+            float: left;
+            margin-right: 30px;
+            padding: 18px 0;
+            box-sizing: border-box;
+        }
+        footer .footerLast p.floatRight {
+            float: right;
+            margin-left: 20px;
+            box-sizing: border-box;
         }
     </style>
 </head>
 
 <body>
+    <!-- <div id="modal">testsetsetsetsetsets</div> -->
     <div id="divtopbar">
         봄맞이 특가 세일! 함께 뭉치면 최대49% 할인! <a id="atopbar" href="#">공동구매하기</a>
     </div>
+    <div id="dummyDiv"></div>
+    <div id="dummyMask"></div>
     <div id="headerWrap">
         <div id="header">
             <div id="divWidthHeight">
@@ -249,27 +405,69 @@
                     <table class="gnb3depth">
                         <tr>
                             <td rowspan="2" colspan="2">
-                                <img src="https://images.samsung.com/kdp/display/gnb/b3245d74-e0e0-4da1-bd32-20c8d57e02e7.jpg?$ORIGIN_JPG$">
+                                <div class="gnb3DepthTableDiv">
+                                    <img class="borderRadius30px" src="https://images.samsung.com/kdp/display/gnb/b3245d74-e0e0-4da1-bd32-20c8d57e02e7.jpg?$ORIGIN_JPG$">
+                                    <div class="gnb3DepthTextarea">
+                                        <div class="gnb3DepthTableTitle"><span class="textBold textFontSize30px">Galaxy S22|S22+<br>S22 Ultra 런칭</span></div>
+                                        <div class="gnb3DepthTableContent"><span class="textFontSize14px">절대적 단독 컬러와 탐나는 단독 혜택까지<br>지금 바로 확인하세요</span></div>
+                                    </div>
+                                </div>
                             </td>
                             <td>
-                                <img src="https://images.samsung.com/kdp/display/gnb/dc865d61-dc88-4e9c-8c56-f077015410c0.jpg?$ORIGIN_JPG$">
+                                <div class="gnb3DepthTableDiv">
+                                    <img src="https://images.samsung.com/kdp/display/gnb/dc865d61-dc88-4e9c-8c56-f077015410c0.jpg?$ORIGIN_JPG$">
+                                    <div class="gnb3DepthTextarea">
+                                        <div class="gnb3DepthTableTitle"><span class="textBold textFontSize18px">BESPOKE 인덕션</span></div>
+                                        <div class="gnb3DepthTableContent"><span class="textFontSize12px">최대 24만 런칭 혜택으로<br>감각적인 주방을 완성하세요</span></div>
+                                    </div>
+                                </div>
                             </td>
                             <td>
-                                <img src="https://images.samsung.com/kdp/display/gnb/194d55f0-6383-4d84-ac36-2b56e24b46d3.png?$ORIGIN_JPG$">
+                                <div class="gnb3DepthTableDiv">
+                                    <img src="https://images.samsung.com/kdp/display/gnb/194d55f0-6383-4d84-ac36-2b56e24b46d3.png?$ORIGIN_JPG$">
+                                    <div class="gnb3DepthTextarea">
+                                        <div class="gnb3DepthTableTitle"><span class="textBold textFontSize18px">BESPOKE 무풍에어컨</span></div>
+                                        <div class="gnb3DepthTableContent"><span class="textFontSize12px">최대 75만 런칭 혜택으로<br>올 여름 준비 끝</span></div>
+                                    </div>
+                                </div>
                             </td>
                             <td>
-                                <img src="https://images.samsung.com/kdp/display/gnb/f7ec319e-9834-4559-8635-87b12f70ac8d.jpg?$ORIGIN_JPG$">
+                                <div class="gnb3DepthTableDiv">
+                                    <img src="https://images.samsung.com/kdp/display/gnb/f7ec319e-9834-4559-8635-87b12f70ac8d.jpg?$ORIGIN_JPG$">
+                                    <div class="gnb3DepthTextarea">
+                                        <div class="gnb3DepthTableTitle"><span class="textBold textFontSize18px">BESPOKE 그랑데 AI</span></div>
+                                        <div class="gnb3DepthTableContent"><span class="textFontSize12px">최대 13만 런칭 혜택과<br>닷컴 단독 모델 할인까지!</span></div>
+                                    </div>
+                                </div>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <img src="https://images.samsung.com/kdp/display/gnb/cf7f1877-37cf-4f5f-9532-5eb7ccdf9a3f.png?$ORIGIN_JPG$">
+                                <div class="gnb3DepthTableDiv">
+                                    <img src="https://images.samsung.com/kdp/display/gnb/cf7f1877-37cf-4f5f-9532-5eb7ccdf9a3f.png?$ORIGIN_JPG$">
+                                    <div class="gnb3DepthTextarea">
+                                        <div class="gnb3DepthTableTitle"><span class="textBold textFontSize18px">BESPOKE 큐커</span></div>
+                                        <div class="gnb3DepthTableContent"><span class="textFontSize12px">삼성카드 My큐커플랜 가입 시<br>가입비 5만 + CJ혜택 30만!</span></div>
+                                    </div>
+                                </div>
                             </td>
                             <td>
-                                <img src="https://images.samsung.com/kdp/display/gnb/0e65615a-2264-4c98-848e-995eae98667b.png?$ORIGIN_JPG$">
+                                <div class="gnb3DepthTableDiv">
+                                    <img src="https://images.samsung.com/kdp/display/gnb/0e65615a-2264-4c98-848e-995eae98667b.png?$ORIGIN_JPG$">
+                                    <div class="gnb3DepthTextarea">
+                                        <div class="gnb3DepthTableTitle"><span class="textBold textFontSize18px">Galaxy Book2 Series</span></div>
+                                        <div class="gnb3DepthTableContent"><span class="textFontSize12px">더 강력해진 갤럭시 북2<br>사전판매 최대 176만 혜택</span></div>
+                                    </div>
+                                </div>
                             </td>
                             <td>
-                                <img src="https://images.samsung.com/kdp/display/gnb/ce5249dc-6c8c-494d-86b8-e318675c245a.jpg?$ORIGIN_JPG$">
+                                <div class="gnb3DepthTableDiv">
+                                    <img src="https://images.samsung.com/kdp/display/gnb/ce5249dc-6c8c-494d-86b8-e318675c245a.jpg?$ORIGIN_JPG$">
+                                    <div class="gnb3DepthTextarea">
+                                        <div class="gnb3DepthTableTitle"><span class="textBold textFontSize18px">2022 Neo QLED</span></div>
+                                        <div class="gnb3DepthTableContent"><span class="textFontSize12px">최대 112만 혜택으로 즐기는<br>초고화질 대화면 TV</span></div>
+                                    </div>
+                                </div>
                             </td>
                             <td></td>
                         </tr>
@@ -496,7 +694,7 @@
                 </div>
                 <div class="gnb3Depth">
                     <ul class="gnb3DepthUl">
-                        <li class="gnb3DepthLi"><span>BESPOKE 제작소 AI<img class="imgnew" src="https://image.useinsider.com/samsungkr/defaultImageLibrary/NEW_TAG-1645061167.png"></span></li>
+                        <li class="gnb3DepthLi" style="position:relative;"><span>BESPOKE 제작소 AI<img id="imgnew" src="https://image.useinsider.com/samsungkr/defaultImageLibrary/NEW_TAG-1645061167.png"></span></li>
                         <li class="gnb3DepthLi"><span>BESPOKE 냉장고/김치냉장고</span></li>
                         <li class="gnb3DepthLi"><span>BESPOKE 정수기</span></li>
                         <li class="gnb3DepthLi"><span>BESPOKE 식기세척기</span></li>
@@ -834,35 +1032,88 @@
                         <li class="gnb3DepthLi"><span>프린터 소모품</span></li>
                     </ul>
                 </div>
-                <div class="gnb5Depth">
-
+                <div class="gnb5Depth borderNone">
                 </div>
                 <div class="gnb5Depth">
-                    <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/aa875b86-a852-45a4-a143-1528f11b7ea9.jpg?$ORIGIN_JPG$">
+                    <div class="gnb5DepthImgDiv">
+                        <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/aa875b86-a852-45a4-a143-1528f11b7ea9.jpg?$ORIGIN_JPG$">
+                    </div>
+                    <div class="gnb5DepthTextDiv">
+                        <div class="marginBottom18px"><span class="textBold textFontSize18px">봄맞이 인기 가전 특가 세일</span></div>
+                        <div><span class="textBold textFontSize14px textUnderLine">공동 구매하기</span></div>
+                    </div>
                 </div>
                 <div class="gnb5Depth">
-                    <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/8e2f3e36-0332-45c4-87b1-1419fe01f615.jpg?$ORIGIN_JPG$">
+                    <div class="gnb5DepthImgDiv">
+                        <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/8e2f3e36-0332-45c4-87b1-1419fe01f615.jpg?$ORIGIN_JPG$">
+                    </div>
+                    <div class="gnb5DepthTextDiv">
+                        <div class="marginBottom18px"><span class="textBold textFontSize18px">Galaxy S22 Ultar 런칭</span></div>
+                        <div><span class="textBold textFontSize14px textUnderLine">온라인 체험하기</span></div>
+                    </div>
                 </div>
                 <div class="gnb5Depth">
-                    <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/81c7f31d-0021-4a02-9e6a-06087c9a5701.jpg?$ORIGIN_JPG$">
+                    <div class="gnb5DepthImgDiv">
+                        <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/81c7f31d-0021-4a02-9e6a-06087c9a5701.jpg?$ORIGIN_JPG$">
+                    </div>
+                    <div class="gnb5DepthTextDiv">
+                        <div class="marginBottom18px"><span class="textBold textFontSize18px">The Freestyle</span></div>
+                        <div><span class="textBold textFontSize14px textUnderLine">판매 준비중</span></div>
+                    </div>
                 </div>
                 <div class="gnb5Depth">
-                    <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/87e4b057-5bab-445f-8f84-ed9bf4506f98.jpg?$ORIGIN_JPG$">
+                    <div class="gnb5DepthImgDiv">
+                        <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/87e4b057-5bab-445f-8f84-ed9bf4506f98.jpg?$ORIGIN_JPG$">
+                    </div>
+                    <div class="gnb5DepthTextDiv">
+                        <div class="marginBottom18px"><span class="textBold textFontSize18px">BESPOKE의 모든 것</span></div>
+                        <div><span class="textBold textFontSize14px textUnderLine">더 알아보기</span></div>
+                    </div>
                 </div>
                 <div class="gnb5Depth">
-                    <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/326c5d47-17e3-47bb-89cf-512fb3d43c7d.jpg?$ORIGIN_JPG$">
+                    <div class="gnb5DepthImgDiv">
+                        <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/326c5d47-17e3-47bb-89cf-512fb3d43c7d.jpg?$ORIGIN_JPG$">
+                    </div>
+                    <div class="gnb5DepthTextDiv">
+                        <div class="marginBottom18px"><span class="textBold textFontSize18px">BESPOKE 인덕션 런칭</span></div>
+                        <div><span class="textBold textFontSize14px textUnderLine">구매 혜택 보기</span></div>
+                    </div>
                 </div>
                 <div class="gnb5Depth">
-                    <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/55d9dc9b-a4d1-44a9-a63d-7329a6192024.jpg?$ORIGIN_JPG$">
+                    <div class="gnb5DepthImgDiv">
+                        <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/55d9dc9b-a4d1-44a9-a63d-7329a6192024.jpg?$ORIGIN_JPG$">
+                    </div>
+                    <div class="gnb5DepthTextDiv">
+                        <div class="marginBottom18px"><span class="textBold textFontSize18px">BESPOKE 제트 / 제트 봇 런칭</span></div>
+                        <div><span class="textBold textFontSize14px textUnderLine">구매 혜택 보기</span></div>
+                    </div>
                 </div>
                 <div class="gnb5Depth">
-                    <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/f2ead5e7-ff13-481c-a634-949edf66f508.jpg?$ORIGIN_JPG$">
+                    <div class="gnb5DepthImgDiv">
+                        <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/f2ead5e7-ff13-481c-a634-949edf66f508.jpg?$ORIGIN_JPG$">
+                    </div>
+                    <div class="gnb5DepthTextDiv">
+                        <div class="marginBottom18px"><span class="textBold textFontSize18px">Galaxy Book2 Series 사전판매</span></div>
+                        <div><span class="textBold textFontSize14px textUnderLine">구매 혜택 보기</span></div>
+                    </div>
                 </div>
                 <div class="gnb5Depth">
-                    <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/25e5b827-51ef-47f0-9d76-f5982d86a89d.jpg?$ORIGIN_JPG$">
+                    <div class="gnb5DepthImgDiv">
+                        <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/25e5b827-51ef-47f0-9d76-f5982d86a89d.jpg?$ORIGIN_JPG$">
+                    </div>
+                    <div class="gnb5DepthTextDiv">
+                        <div class="marginBottom18px"><span class="textBold textFontSize18px">#YouMake 프로젝트</span></div>
+                        <div><span class="textBold textFontSize14px textUnderLine">더 알아보기</span></div>
+                    </div>
                 </div>
                 <div class="gnb5Depth">
-                    <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/14de5e3e-dd1f-43ef-b340-d33066ba6dcb.jpg?$ORIGIN_JPG$">
+                    <div class="gnb5DepthImgDiv">
+                        <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/14de5e3e-dd1f-43ef-b340-d33066ba6dcb.jpg?$ORIGIN_JPG$">
+                    </div>
+                    <div class="gnb5DepthTextDiv">
+                        <div class="marginBottom18px"><span class="textBold textFontSize18px">소모품 통합 기획전</span></div>
+                        <div><span class="textBold textFontSize14px textUnderLine">구매 혜택 보기</span></div>
+                    </div>
                 </div>
                     
             </div>
@@ -962,40 +1213,112 @@
                     </ul>
                 </div>
                 <div class="gnb5Depth">
-                    <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/7dcf0aa6-b452-4a60-adb2-c2cba0a2a24b.jpg?$ORIGIN_JPG$">
+                    <div class="gnb5DepthImgDiv">
+                        <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/7dcf0aa6-b452-4a60-adb2-c2cba0a2a24b.jpg?$ORIGIN_JPG$">
+                    </div>
+                    <div class="gnb5DepthTextDiv">
+                        <div class="marginBottom18px"><span class="textBold textFontSize18px">Galaxy S22|S22+|S22 Ultra 런칭</span></div>
+                        <div><span class="textBold textFontSize14px textUnderLine">구매 혜택 보기</span></div>
+                    </div>
                 </div>
                 <div class="gnb5Depth">
-                    <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/6b43a23e-2737-4fcc-b56b-4c7cd258660b.png?$ORIGIN_JPG$">
+                    <div class="gnb5DepthImgDiv">
+                        <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/6b43a23e-2737-4fcc-b56b-4c7cd258660b.png?$ORIGIN_JPG$">
+                    </div>
+                    <div class="gnb5DepthTextDiv">
+                        <div class="marginBottom18px"><span class="textBold textFontSize18px">Galaxy S22|S22+|S22 Ultra 런칭</span></div>
+                        <div><span class="textBold textFontSize14px textUnderLine">구매 혜택 보기</span></div>
+                    </div>
                 </div>
                 <div class="gnb5Depth">
-                    <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/42d37fe6-56d0-4b08-a067-dd3d40f51b31.jpg?$ORIGIN_JPG$">
+                    <div class="gnb5DepthImgDiv">
+                        <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/42d37fe6-56d0-4b08-a067-dd3d40f51b31.jpg?$ORIGIN_JPG$">
+                    </div>
+                    <div class="gnb5DepthTextDiv">
+                        <div class="marginBottom18px"><span class="textBold textFontSize18px">봄맞이 인기 가전 특가 세일</span></div>
+                        <div><span class="textBold textFontSize14px textUnderLine">공동 구매하기</span></div>
+                    </div>
                 </div>
                 <div class="gnb5Depth">
-                    <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/7e56f636-dd25-4ad8-a0bc-a15fddc08b74.jpg?$ORIGIN_JPG$">
+                    <div class="gnb5DepthImgDiv">
+                        <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/7e56f636-dd25-4ad8-a0bc-a15fddc08b74.jpg?$ORIGIN_JPG$">
+                    </div>
+                    <div class="gnb5DepthTextDiv">
+                        <div class="marginBottom18px"><span class="textBold textFontSize18px">웨딩&middot;신혼샵</span></div>
+                        <div><span class="textBold textFontSize14px textUnderLine">인증하고 혜택 받기</span></div>
+                    </div>
                 </div>
                 <div class="gnb5Depth">
-                    <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/e781e980-68fe-4c7e-9619-0a4636282555.jpg?$ORIGIN_JPG$">
+                    <div class="gnb5DepthImgDiv">
+                        <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/e781e980-68fe-4c7e-9619-0a4636282555.jpg?$ORIGIN_JPG$">
+                    </div>
+                    <div class="gnb5DepthTextDiv">
+                        <div class="marginBottom18px"><span class="textBold textFontSize18px">갤럭시 캠퍼스 스토어</span></div>
+                        <div><span class="textBold textFontSize14px textUnderLine">자세히 보기</span></div>
+                    </div>
                 </div>
                 <div class="gnb5Depth">
-                    <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/07799f75-f790-4474-aa7a-97666e25e959.jpg?$ORIGIN_JPG$">
+                    <div class="gnb5DepthImgDiv">
+                        <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/07799f75-f790-4474-aa7a-97666e25e959.jpg?$ORIGIN_JPG$">
+                    </div>
+                    <div class="gnb5DepthTextDiv">
+                        <div class="marginBottom18px"><span class="textBold textFontSize18px">삼성닷컴 아울렛</span></div>
+                        <div><span class="textBold textFontSize14px textUnderLine">구매하기</span></div>
+                    </div>
                 </div>
                 <div class="gnb5Depth">
-                    <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/f761cd6a-d25f-4da6-9a61-5dd76652780f.png?$ORIGIN_JPG$">
+                    <div class="gnb5DepthImgDiv">
+                        <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/f761cd6a-d25f-4da6-9a61-5dd76652780f.png?$ORIGIN_JPG$">
+                    </div>
+                    <div class="gnb5DepthTextDiv">
+                        <div class="marginBottom18px"><span class="textBold textFontSize18px">Galaxy S22|S22+|S22 Ultra 런칭</span></div>
+                        <div><span class="textBold textFontSize14px textUnderLine">구매 혜택 보기</span></div>
+                    </div>
                 </div>
                 <div class="gnb5Depth">
-                    <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/a4bf7525-c412-4d00-a551-a2c004e77ec3.jpg?$ORIGIN_JPG$">
+                    <div class="gnb5DepthImgDiv">
+                        <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/a4bf7525-c412-4d00-a551-a2c004e77ec3.jpg?$ORIGIN_JPG$">
+                    </div>
+                    <div class="gnb5DepthTextDiv">
+                        <div class="marginBottom18px"><span class="textBold textFontSize18px">갤럭시 스튜디오</span></div>
+                        <div><span class="textBold textFontSize14px textUnderLine">입장하기</span></div>
+                    </div>
                 </div>
                 <div class="gnb5Depth">
-                    <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/a0900b14-6f47-4440-b176-668d83b16153.jpg?$ORIGIN_JPG$">
+                    <div class="gnb5DepthImgDiv">
+                        <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/a0900b14-6f47-4440-b176-668d83b16153.jpg?$ORIGIN_JPG$">
+                    </div>
+                    <div class="gnb5DepthTextDiv">
+                        <div class="marginBottom18px"><span class="textBold textFontSize18px">삼성 홈 피트니스</span></div>
+                        <div><span class="textBold textFontSize14px textUnderLine">홈 피트니스 시작하기</span></div>
+                    </div>
                 </div>
                 <div class="gnb5Depth">
-                    <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/3083b165-2b2e-46d5-be69-51b990984f9e.jpg?$ORIGIN_JPG$">
+                    <div class="gnb5DepthImgDiv">
+                        <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/3083b165-2b2e-46d5-be69-51b990984f9e.jpg?$ORIGIN_JPG$">
+                    </div>
+                    <div class="gnb5DepthTextDiv">
+                        <div class="marginBottom18px"><span class="textBold textFontSize18px">삼성닷컴 Live</span></div>
+                        <div><span class="textBold textFontSize14px textUnderLine">Live 다시보기</span></div>
+                    </div>
                 </div>
                 <div class="gnb5Depth">
-                    <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/222c29db-796d-4f23-a99d-cc5e90629208.png?$ORIGIN_JPG$">
+                    <div class="gnb5DepthImgDiv">
+                        <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/222c29db-796d-4f23-a99d-cc5e90629208.png?$ORIGIN_JPG$">
+                    </div>
+                    <div class="gnb5DepthTextDiv">
+                        <div class="marginBottom18px"><span class="textBold textFontSize18px">MD초이스 샵</span></div>
+                        <div><span class="textBold textFontSize14px textUnderLine"></span></div>
+                    </div>
                 </div>
                 <div class="gnb5Depth">
-                    <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/1d4ab6e6-391e-40cd-b8dd-623eb862833a.png?$ORIGIN_JPG$">
+                    <div class="gnb5DepthImgDiv">
+                        <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/1d4ab6e6-391e-40cd-b8dd-623eb862833a.png?$ORIGIN_JPG$">
+                    </div>
+                    <div class="gnb5DepthTextDiv">
+                        <div class="marginBottom18px"><span class="textBold textFontSize18px">갤럭시 커스텀 스튜디오</span></div>
+                        <div><span class="textBold textFontSize14px textUnderLine">자세히 보기</span></div>
+                    </div>
                 </div>
             </div>
             <div class="gnb2Depth">
@@ -1093,16 +1416,28 @@
                     </ul>
                 </div>
                 <div class="gnb5Depth">
-                    <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/d1e24ae1-9248-4b4a-af0a-5fb3e52ccc2b.jpg?$ORIGIN_JPG$">
+                    <div class="gnb5DepthImgDiv">
+                        <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/d1e24ae1-9248-4b4a-af0a-5fb3e52ccc2b.jpg?$ORIGIN_JPG$">
+                    </div>
+                    <div class="gnb5DepthTextDiv">
+                        <div class="marginBottom18px"><span class="textBold textFontSize18px">큐커 스캔쿸 식품 상품평 이벤트</span></div>
+                        <div><span class="textBold textFontSize14px textUnderLine">더 알아보기</span></div>
+                    </div>
                 </div>
-                <div class="gnb5Depth">
+                <div class="gnb5Depth borderNone">
+                    
+                </div>
+                <div class="gnb5Depth borderNone">
                     
                 </div>
                 <div class="gnb5Depth">
-                    
-                </div>
-                <div class="gnb5Depth">
-                    <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/74f44d5d-b189-46c3-a65b-d91b95fe1244.jpg?$ORIGIN_JPG$">
+                    <div class="gnb5DepthImgDiv">
+                        <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/74f44d5d-b189-46c3-a65b-d91b95fe1244.jpg?$ORIGIN_JPG$">
+                    </div>
+                    <div class="gnb5DepthTextDiv">
+                        <div class="marginBottom18px"><span class="textBold textFontSize18px">봄 맞이 큐커 식품관 모음전</span></div>
+                        <div><span class="textBold textFontSize14px textUnderLine">제품 모두 보기</span></div>
+                    </div>
                 </div>
             </div>
             <div class="gnb2Depth">
@@ -1157,7 +1492,58 @@
                     </ul>
                 </div>
                 <div class="gnb5Depth">
-                    <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/aa875b86-a852-45a4-a143-1528f11b7ea9.jpg?$ORIGIN_JPG$">
+                    <div class="gnb5DepthImgDiv">
+                        <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/78432002-3bca-4787-9acb-8bcf5f29d991.jpg?$ORIGIN_JPG$">
+                    </div>
+                    <div class="gnb5DepthTextDiv">
+                        <div class="marginBottom18px"><span class="textBold textFontSize18px">미래를 위한 동행 @CES 2022</span></div>
+                        <div><span class="textBold textFontSize14px textUnderLine">더 알아보기</span></div>
+                    </div>
+                </div>
+                <div class="gnb5Depth">
+                    <div class="gnb5DepthImgDiv">
+                        <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/78432002-3bca-4787-9acb-8bcf5f29d991.jpg?$ORIGIN_JPG$">
+                    </div>
+                    <div class="gnb5DepthTextDiv">
+                        <div class="marginBottom18px"><span class="textBold textFontSize18px">미래를 위한 동행 @CES 2022</span></div>
+                        <div><span class="textBold textFontSize14px textUnderLine">더 알아보기</span></div>
+                    </div>
+                </div>
+                <div class="gnb5Depth">
+                    <div class="gnb5DepthImgDiv">
+                        <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/78432002-3bca-4787-9acb-8bcf5f29d991.jpg?$ORIGIN_JPG$">
+                    </div>
+                    <div class="gnb5DepthTextDiv">
+                        <div class="marginBottom18px"><span class="textBold textFontSize18px">미래를 위한 동행 @CES 2022</span></div>
+                        <div><span class="textBold textFontSize14px textUnderLine">더 알아보기</span></div>
+                    </div>
+                </div>
+                <div class="gnb5Depth">
+                    <div class="gnb5DepthImgDiv">
+                        <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/78432002-3bca-4787-9acb-8bcf5f29d991.jpg?$ORIGIN_JPG$">
+                    </div>
+                    <div class="gnb5DepthTextDiv">
+                        <div class="marginBottom18px"><span class="textBold textFontSize18px">미래를 위한 동행 @CES 2022</span></div>
+                        <div><span class="textBold textFontSize14px textUnderLine">더 알아보기</span></div>
+                    </div>
+                </div>
+                <div class="gnb5Depth">
+                    <div class="gnb5DepthImgDiv">
+                        <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/78432002-3bca-4787-9acb-8bcf5f29d991.jpg?$ORIGIN_JPG$">
+                    </div>
+                    <div class="gnb5DepthTextDiv">
+                        <div class="marginBottom18px"><span class="textBold textFontSize18px">미래를 위한 동행 @CES 2022</span></div>
+                        <div><span class="textBold textFontSize14px textUnderLine">더 알아보기</span></div>
+                    </div>
+                </div>
+                <div class="gnb5Depth">
+                    <div class="gnb5DepthImgDiv">
+                        <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/0373b21a-9e9d-45d8-8a6d-173059a487ef.jpg?$ORIGIN_JPG$">
+                    </div>
+                    <div class="gnb5DepthTextDiv">
+                        <div class="marginBottom18px"><span class="textBold textFontSize18px">#YouMake 프로젝트</span></div>
+                        <div><span class="textBold textFontSize14px textUnderLine">더 알아보기</span></div>
+                    </div>
                 </div>
             </div>
             <div class="gnb2Depth">
@@ -1208,15 +1594,21 @@
                     </ul>
                 </div>
                 <div class="gnb5Depth">
-                    <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/3823f581-fdc7-4936-8d3c-00cb35ada470.jpg?$ORIGIN_JPG$">
+                    <div class="gnb5DepthImgDiv">
+                        <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/3823f581-fdc7-4936-8d3c-00cb35ada470.jpg?$ORIGIN_JPG$">
+                    </div>
+                    <div class="gnb5DepthTextDiv">
+                        <div class="marginBottom18px"><span class="textBold textFontSize18px">무엇을 도와드릴까요?</span></div>
+                        <div><span class="textBold textFontSize14px textUnderLine">더 알아보기</span></div>
+                    </div>
                 </div>
-                <div class="gnb5Depth">
+                <div class="gnb5Depth borderNone">
                 </div>
-                <div class="gnb5Depth">
+                <div class="gnb5Depth borderNone">
                 </div>
-                <div class="gnb5Depth">
+                <div class="gnb5Depth borderNone">
                 </div>
-                <div class="gnb5Depth">
+                <div class="gnb5Depth borderNone">
                 </div>
             </div>
             <div class="gnb2Depth">
@@ -1236,7 +1628,13 @@
                     </ul>
                 </div>
                 <div class="gnb5Depth">
-                    <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/cd1fbfcd-7d3c-4bb3-b285-94a7b56b74c0.jpg?$ORIGIN_JPG$">
+                    <div class="gnb5DepthImgDiv">
+                        <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/cd1fbfcd-7d3c-4bb3-b285-94a7b56b74c0.jpg?$ORIGIN_JPG$">
+                    </div>
+                    <div class="gnb5DepthTextDiv">
+                        <div class="marginBottom18px"><span class="textBold textFontSize18px">나의 멤버십</span></div>
+                        <div><span class="textBold textFontSize14px textUnderLine">더 알아보기</span></div>
+                    </div>
                 </div>
             </div>
             <div class="gnb2Depth">
@@ -1257,11 +1655,486 @@
                     </ul>
                 </div>
                 <div class="gnb5Depth">
-                    <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/28a4cdf9-58c5-4c2d-93e7-772b7d4b1467.jpg?$ORIGIN_JPG$">
+                    <div class="gnb5DepthImgDiv">
+                        <img class="gnb5DepthImg" src="https://images.samsung.com/kdp/display/gnb/28a4cdf9-58c5-4c2d-93e7-772b7d4b1467.jpg?$ORIGIN_JPG$">
+                    </div>
+                    <div class="gnb5DepthTextDiv">
+                        <div class="marginBottom18px"><span class="textBold textFontSize18px"></span></div>
+                        <div><span class="textBold textFontSize14px textUnderLine">VR스토어 체험하기</span></div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+    
+
+    <div class="sectionBody">
+        <div class="section1">
+            <input type="radio" name="ssd" id="slide01" checked>
+            <input type="radio" name="ssd" id="slide02">
+            <input type="radio" name="ssd" id="slide03">
+            <div class="slidewrap">
+                <ul class="slidelist">
+                    <li class="slideitem">
+                            <div class="textbox">
+                                <h3>Neo QLED</h3>
+                                <p>Global No.1이 만든 새로운 화질</p>
+                                <p class="the"> 더 알아보기</p><br>
+                                <button type="button" class="btn btn-primary"> 제품 모두보기</button>
+                            </div>
+                            <img src="./images/NeoQLED.jpg">
+                    </li>
+                    <li class="slideitem">
+                            <div class="textbox">		
+                                <h3>MICRO LED</h3>
+                                <p>지금껏 보지 못했던<br>새로운 빛의 세계를 체험해보세요.</p><br>
+                                <p class="the">더 알아보기</p> <button type="button" class="btn btn-primary">매장찾기</button>
+                            </div>
+                            <img src="./images/MICRO LED.jpg">
+                    </li>
+                    <li class="slideitem">
+                            <div class="textbox">
+                                <h3>미국 주요매체 선정 '최고의 모니터'</h3>
+                                <p>나만의 공간에서 하나로 즐기는 올인원 스크린</p><br>
+                                <button type="button" class="btn btn-primary"> 구매하기</button>
+                            </div>
+                            <img src="./images/스마트모니터.jpg">
+                    </li class="slideitem">
+        
+                    <div class="slide-control">
+                        <div>
+                            <label class="top"><b>TV & 오디오</b></label>
+                            <label for="slide01" class="left">NeoQLED</label>
+                            <label for="slide02" class="middle">MICRO LED</label>
+                            <label for="slide03" class="right">스마트모니터</label>
+                        </div>
+                        <div>
+                            <label class="top"><b>TV & 오디오</b></label>
+                            <label for="slide01" class="left">NeoQLED</label>
+                            <label for="slide02" class="middle">MICRO LED</label>
+                            <label for="slide03" class="right">스마트모니터</label>
+                        </div>
+                        <div>
+                            <label class="top"><b>TV & 오디오</b></label>
+                            <label for="slide01" class="left">NeoQLED</label>
+                            <label for="slide02" class="middle">MICRO LED</label>
+                            <label for="slide03" class="right">스마트모니터</div>
+                        </div>
+                    </div>
+        
+                </ul>
+            </div>
+        </div>
+        
+
+
+        <div class="section2">
+            <input type="radio" name="slide" id="slide04" checked>
+            <input type="radio" name="slide" id="slide05">
+            <input type="radio" name="slide" id="slide06">
+            <input type="radio" name="slide" id="slide07">
+            <input type="radio" name="slide" id="slide08">
+            <input type="radio" name="slide" id="slide09">
+
+            <div class="slidewrap">
+                <ul class="slidelist">
+                    <!-- 슬라이드 영역 -->
+                    <li class="slideitem">
+                        <a>
+                            <div class="textbox01">
+                                <h3>BESPOKE냉장고 Infinite Line</h3>
+                                <p>무한히 변치 않는 나만의 가치</p>
+                                <p class="the"> 더 알아보기</p>
+                                <button class="custom-btn btn-13"><span>Click!</span><span>조합하여 구매하기</span></button>
+                            </div>
+                            <img src="./images/BESPOKE냉장고.jpg">
+
+                        </a>
+                    </li>
+                    <li class="slideitem">
+                        <a>
+                            <div class="textbox">
+                                <h3>BESPOKE 제트I 제트 봇 런칭</h3>
+                                <p>최대 31만원 상당 런칭 혜택으로<br>마무리까지 알아서 끝내주는 제트를 만나보세요</p>
+                                <button class="custom-btn btn-12"><span>Click!</span><span>구매 혜택보기</span></button>
+                            </div>
+                            <img src="./images/제트봇런치.webp">
+                        </a>
+                    </li>
+                    <li class="slideitem">
+                        <a>
+                            <div class="textbox">
+                                <h3>BESPOKE 무풍에어컨 갤러리 런칭</h3>
+                                <p>최대 75만원 상당 혜택으로 올 여름 준비 끝!</p>
+                                <p></p>
+                                <button class="custom-btn btn-12"><span>Click!</span><span>구매 혜택보기</span></button>
+                            </div>
+                            <img src="./images/무풍에어컨.webp">
+                        </a>
+                    </li>
+                    <li class="slideitem">
+                        <a>
+                            <div class="textbox">
+                                <h3>2022 NEW BESPOKE 그랑데 AI 런칭</h3>
+                                <p>세탁, 건조는 물론 위생까지 알아서!<br>최대 13만 상당 런칭 혜택으로 만나보세요.</p>
+                                <button class="custom-btn btn-12"><span>Click!</span><span>구매 혜택보기</span></button>
+                            </div>
+                            <img src="./images/그랑데.webp">
+                        </a>
+                    </li>
+
+                    <li class="slideitem">
+                        <a>
+                            <div class="textbox">
+                                <h3>BESPOKE 큐커</h3>
+                                <p>My 큐커 플랜 삼성카드 약정 가입하면<br>BESPOKE 큐커가 단 5만원에!</p>
+                                <button class="custom-btn btn-12"><span>Click!</span><span>구매하기</span></button>
+                            </div>
+                            <img src="./images/큐커.webp">
+                        </a>
+                    </li>
+                    <li class="slideitem">
+                        <a>
+                            <div class="textbox">
+                                <h3>BESPOKE HOME</h3>
+                                <p>우리집을 비스포크하다</p>
+                                <p>360 컬러 조합하기</p>
+                                <button class="custom-btn btn-12"><span>Click!</span><span>구매 혜택보기</span></button>
+                            </div>
+                            <img src="./images/BESPOKE HOME.jpg">
+                        </a>
+                    </li class="slideitem">
+
+
+                    <div class="slide-control">
+                        <div>
+                            <label for="slide04" class="text01">BESPOKE 냉장고 Infinite Line</label>
+                            <label for="slide05" class="text02">BESPOKE 제트</label>
+                            <label for="slide06" class="text03">BESPOKE 무풍에어컨</label>
+                            <label for="slide07" class="text04">BESPOKE 그랑데</label>
+                            <label for="slide08" class="text05">BESPOKE 큐커</label>
+                            <label for="slide09" class="text06">BESPOKE HOME</label>
+                        </div>
+                        <div>
+                            <label for="slide04" class="text01">BESPOKE 냉장고 Infinite Line</label>
+                            <label for="slide05" class="text02">BESPOKE 제트</label>
+                            <label for="slide06" class="text03">BESPOKE 무풍에어컨</label>
+                            <label for="slide07" class="text04">BESPOKE 그랑데</label>
+                            <label for="slide08" class="text05">BESPOKE 큐커</label>
+                            <label for="slide09" class="text06">BESPOKE HOME</label>
+                        </div>
+                        <div>
+                            <label for="slide04" class="text01">BESPOKE 냉장고 Infinite Line</label>
+                            <label for="slide05" class="text02">BESPOKE 제트</label>
+                            <label for="slide06" class="text03">BESPOKE 무풍에어컨</label>
+                            <label for="slide07" class="text04">BESPOKE 그랑데</label>
+                            <label for="slide08" class="text05">BESPOKE 큐커</label>
+                            <label for="slide09" class="text06">BESPOKE HOME</label>
+                        </div>
+                        <div>
+                            <label for="slide04" class="text01">BESPOKE 냉장고 Infinite Line</label>
+                            <label for="slide05" class="text02">BESPOKE 제트</label>
+                            <label for="slide06" class="text03">BESPOKE 무풍에어컨</label>
+                            <label for="slide07" class="text04">BESPOKE 그랑데</label>
+                            <label for="slide08" class="text05">BESPOKE 큐커</label>
+                            <label for="slide09" class="text06">BESPOKE HOME</label>
+                        </div>
+                        <div>
+                            <label for="slide04" class="text01">BESPOKE 냉장고 Infinite Line</label>
+                            <label for="slide05" class="text02">BESPOKE 제트</label>
+                            <label for="slide06" class="text03">BESPOKE 무풍에어컨</label>
+                            <label for="slide07" class="text04">BESPOKE 그랑데</label>
+                            <label for="slide08" class="text05">BESPOKE 큐커</label>
+                            <label for="slide09" class="text06">BESPOKE HOME</label>
+                        </div>
+                        <div>
+                            <label for="slide04" class="text01">BESPOKE 냉장고 Infinite Line</label>
+                            <label for="slide05" class="text02">BESPOKE 제트</label>
+                            <label for="slide06" class="text03">BESPOKE 무풍에어컨</label>
+                            <label for="slide07" class="text04">BESPOKE 그랑데</label>
+                            <label for="slide08" class="text05">BESPOKE 큐커</label>
+                            <label for="slide09" class="text06">BESPOKE HOME</label>
+                        </div>
+                    </div>
+
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section3">
+            <div class="youmake_wrap">
+                <div class="youmake">#YouMake</div>
+            </div>
+            <div class="tab_content">
+
+                <input type="radio" name="tabmenu" id="tab01" checked>
+                <input type="radio" name="tabmenu" id="tab02">
+                <input type="radio" name="tabmenu" id="tab03">
+                <input type="radio" name="tabmenu" id="tab04">
+
+                <div class="conbox con1"></div>
+                <div class="conbox con2"></div>
+                <div class="conbox con3"></div>
+                <div class="conbox con4"></div>
+
+                <div class="btn">
+                    <label for="tab01" id="tab01_label"></label>
+                    <label for="tab02" id="tab02_label"></label>
+                    <label for="tab03" id="tab03_label"></label>
+                    <label for="tab04" id="tab04_label"></label>
+                </div>
+            </div>
+            <div class="list_style_wrap">
+                <ul class="list_style">
+                    <li id="slide10"><a href="#">01 #YouMake 프로젝트</a>
+                        <p>더 알아보기</p>
+                    </li>
+                </ul>
+                <ul class="list_style">
+                    <li id="slide11"><a href="#">02 #우리집이 영화관이 되는 순간</a>
+                        <p>더 알아보기 </p>
+                    </li>
+                </ul>
+                <ul class="list_style">
+                    <li id="slide12"><a href="#">03 #BESPOKE가 집의 모든 순간을<br>나답게 만드는 방법</a>
+                        <p>더 알아보기 </p>
+                    </li>
+                </ul>
+                <ul class="list_style">
+                    <li id="slide13"><a href="#">04 #Samsung at CE 2022</a>
+                        <p>더 알아보기</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
+    <footer>
+        <table class="footerTable">
+            <tr>
+                <td class="emptyTd"></td>
+                <td class="contentTd">
+                    <table class="footerContentTable textFontSize14px" style="border-left:none;">
+                        <tr>
+                            <th colspan="2" style="font-size: 18px;">제품</th>
+                        </tr>
+                        <tr>
+                            <td>갤럭시</td>
+                            <td>냉장고</td>
+                        </tr>
+                        <tr>
+                            <td>스마트폰</td>
+                            <td>김치냉장고</td>
+                        </tr>
+                        <tr>
+                            <td>태블릿</td>
+                            <td>식기세척기</td>
+                        </tr>
+                        <tr>
+                            <td>워치</td>
+                            <td>전기레인지</td>
+                        </tr>
+                        <tr>
+                            <td>버즈</td>
+                            <td>세탁기</td>
+                        </tr>
+                        <tr>
+                            <td>갤럭시북</td>
+                            <td>건조기</td>
+                        </tr>
+                        <tr>
+                            <td>프린터</td>
+                            <td>에어드레서</td>
+                        </tr>
+                        <tr>
+                            <td>TV</td>
+                            <td>에어컨</td>
+                        </tr>
+                        <tr>
+                            <td>Lifestyle TV</td>
+                            <td>공기청정기</td>
+                        </tr>
+                        <tr>
+                            <td>BESPOKE</td>
+                            <td>청소기</td>
+                        </tr>
+                    </table>
+                </td>
+                <td class="contentTd">
+                    <table class="footerContentTable textFontSize14px">
+                        <tr>
+                            <th style="font-size: 18px;">고객서비스</th>
+                        </tr>
+                        <tr>
+                            <td>삼성닷컴FAQ</td>
+                        </tr>
+                        <tr>
+                            <td>이메일상담</td>
+                        </tr>
+                        <tr>
+                            <td>매장 찾기</td>
+                        </tr>
+                        <tr>
+                            <td>서비스센터 찾기</td>
+                        </tr>
+                        <tr>
+                            <td>디지털프라자</td>
+                        </tr>
+                        <tr>
+                            <td>MD 비즈니스 협력제안</td>
+                        </tr>
+                        <tr>
+                            <td>비즈니스 협력제안</td>
+                        </tr>
+                        <tr>
+                            <td>삼성멤버스 커뮤니티</td>
+                        </tr>
+                        <tr>
+                            <td>E-카탈로그</td>
+                        </tr>
+                        <tr>
+                            <td>고객의 소리</td>
+                        </tr>
+                    </table>
+                </td>
+                <td class="contentTd">
+                    <table class="footerContentTable textFontSize14px">
+                        <tr>
+                            <th style="font-size: 18px;">고객서비스</th>
+                        </tr>
+                        <tr>
+                            <td>개요</td>
+                        </tr>
+                        <tr>
+                            <td>환경</td>
+                        </tr>
+                        <tr>
+                            <td>사회공헌</td>
+                        </tr>
+                        <tr>
+                            <td>디지털 책임</td>
+                        </tr>
+                        <tr>
+                            <td>노동과 인권</td>
+                        </tr>
+                        <tr>
+                            <td>다양성과 포용</td>
+                        </tr>
+                        <tr>
+                            <td>지속가능한 공급망</td>
+                        </tr>
+                        <tr>
+                            <td>제품 접근성</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                        </tr>
+                    </table>
+                </td>
+                <td class="contentTd">
+                    <table class="footerContentTable textFontSize14px">
+                        <tr>
+                            <th style="font-size: 18px;">회사소개</th>
+                        </tr>
+                        <tr>
+                            <td>기업정보</td>
+                        </tr>
+                        <tr>
+                            <td>사업정보</td>
+                        </tr>
+                        <tr>
+                            <td>브랜드 아이덴티티</td>
+                        </tr>
+                        <tr>
+                            <td>채용</td>
+                        </tr>
+                        <tr>
+                            <td>투자자 정보</td>
+                        </tr>
+                        <tr>
+                            <td>뉴스룸</td>
+                        </tr>
+                        <tr>
+                            <td>윤리</td>
+                        </tr>
+                        <tr>
+                            <td>디자인 삼성</td>
+                        </tr>
+                        <tr>
+                            <td>배당조회</td>
+                        </tr>
+                        <tr>
+                            <td>공지사항</td>
+                        </tr>
+                    </table>
+                </td>
+                <td class="contentTd">
+                    <table class="footerContentTable textFontSize14px">
+                        <tr>
+                            <th style="font-size: 18px;">윤리&준법경영</th>
+                        </tr>
+                        <tr>
+                            <td>경영원칙</td>
+                        </tr>
+                        <tr>
+                            <td>부정제보</td>
+                        </tr>
+                        <tr>
+                            <td>법위반제보</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <th style="font-size: 18px;">부가정보</th>
+                        </tr>
+                        <tr>
+                            <td>데이코</td>
+                        </tr>
+                        <tr>
+                            <td>협력회사 사이버 신문고</td>
+                        </tr>
+                        <tr>
+                            <td>폐카트리지 회수신청</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                        </tr>
+                    </table>
+                </td>
+                <td class="emptyTd"></td>
+            </tr>
+        </table>
+        <div class="footerDiv textFontSize12px">
+            <p>삼성전자 주식회사 대표이사 : 한종희 사업자등록번호 : 124-81-00998 사업자 정보확인 통신판매업 신고 : 2000-경기수원-0515</p>
+            <p>사업장주소 : 경기도 수원시 영통구 삼성로 129(매탄동) 호스팅서비스사업자 : 한국아이비엠(주) 대표번호 : 02-2255-0114 제품/서비스/멤버십: 1588-3366(통화요금 : 발신자부담) 구매문의 : 1588-6084 큐커 식품관 문의 : 1811-9228</p>
+            <p>본 사이트에서 판매되는 상품 중에는 등록된 개별 판매자가 판매하는 상품이 포함되어 있습니다.</p>
+            <p>개별 판매자 판매 상품의 경우 삼성전자(주)는 통신판매중개업자로서 통신판매의 당사자가 아니므로, 개별 판매자가 등록한 상품, 거래정보 및 거래 등에 대해 책임을 지지 않습니다.</p>
+            <p>본 사이트의 컨텐츠는 저작권법의 보호를 받는 바 무단 전재, 복사, 배포 등을 금합니다.</p>
+            <p>Copyright © 1995-2022 Samsung. All Rights Reserved.</p>
+        </div>
+        <div class="footerLast textFontSize14px">
+            <p class="floatLeft"><span>한국/한국어</span></p>
+            <p class="floatLeft">이메일 무단 수집거부</p>
+            <p class="floatLeft">아이디어 정책</p>
+            <p class="floatLeft">사이트맵</p>
+            <p class="floatRight"><img src="https://www.samsung.com/sec/static/_images/common/icon-bl.svg" alt=""></p>
+            <p class="floatRight"><img src="https://www.samsung.com/sec/static/_images/common/icon-ig.svg" alt=""></p>
+            <p class="floatRight"><img src="https://www.samsung.com/sec/static/_images/common/icon-yt.svg" alt=""></p>
+            <p class="floatRight"><img src="https://www.samsung.com/sec/static/_images/common/icon-fb.svg" alt=""></p>
+            <p class="floatRight" style="font-weight: bold; font-size: 20px;">sns</p>
+            <p class="floatRight"><img src="https://www.samsung.com/sec/static/_images/common/icon-footer-eprivacy.svg" alt=""></p>
+            <p class="floatRight"><img src="https://www.samsung.com/sec/static/_images/common/icon-footer-wa.svg" alt=""></p>
+        </div>
+    </footer>
     <script>
 
         $(function(){
@@ -1432,12 +2305,13 @@
 
         function openNav() {
             document.getElementById("gnb2DepthDiv").style.height = "600px";
+            document.getElementById("dummyMask").style.display = "block";
             navOpenClose = true;
-            // console.log(navOpenClose);
         };
 
         function closeNav() {
             document.getElementById("gnb2DepthDiv").style.height = "0";
+            document.getElementById("dummyMask").style.display = "none";
             navOpenClose = false;
             $(".liGnb1Depth a").css({background:"white", color:"black"});
         };
@@ -1445,8 +2319,56 @@
         function openNavHeader() {
             if(navOpenClose) {
                 document.getElementById("gnb2DepthDiv").style.height = "600px";
+                document.getElementById("dummyMask").style.display = "block";
             }
         };
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#slide10").hover(function () {
+                $(".con1").show();
+                $(".con2").hide();
+                $(".con3").hide();
+                $(".con4").hide();
+            });
+            $("#slide11").hover(function () {
+                $(".con1").hide();
+                $(".con2").show();
+                $(".con3").hide();
+                $(".con4").hide();
+            });
+            $("#slide12").hover(function () {
+                $(".con1").hide();
+                $(".con2").hide();
+                $(".con3").show();
+                $(".con4").hide();
+            });
+            $("#slide13").hover(function () {
+                $(".con1").hide();
+                $(".con2").hide();
+                $(".con3").hide();
+                $(".con4").show();
+            });
+
+        });
+
+        $(document).ready(function () {
+            $(".left").click(function () {
+                $("#slide01").hover("checked", true)
+                $("#slide02").hover("checked", false)
+                $("#slide03").hover("checked", false)
+            });
+            $(".middle").click(function () {
+                $("#slide02").hover("checked", false)
+                $("#slide02").hover("checked", true)
+                $("#slide02").hover("checked", false)
+            });
+            $(".left").click(function () {
+                $("#slide03").hover("checked", false)
+                $("#slide03").hover("checked", false)
+                $("#slide03").hover("checked", true)
+            });
+        });
     </script>
 </body>
 

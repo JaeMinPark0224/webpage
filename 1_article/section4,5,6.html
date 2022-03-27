@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my first webpage</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link rel="stylesheet" href="./section4.css">
+    <link rel="stylesheet" href="./section5.css">
+    <link rel="stylesheet" href="./section6.css">
+    <link href="./css/reset.css" rel="stylesheet">
+
+    <style>
+        body{
+            width: 95%; margin: 0 auto; }
+    </style>
+  
+
+
+</head>
+
+<body>
+    <section>
+        <div class="section1">
+            <input type="radio" name="ssd" id="slide01" checked>
+            <input type="radio" name="ssd" id="slide02">
+            <input type="radio" name="ssd" id="slide03">
+            <div class="slidewrap">
+                <ul class="slidelist">
+                    <li class="slideitem">
+                            <div class="textbox">
+                                <h3>Neo QLED</h3>
+                                <p>Global No.1이 만든 새로운 화질</p>
+                                <p class="the"> 더 알아보기</p><br>
+                                <button type="button" class="btn btn-primary"> 제품 모두보기</button>
+                            </div>
+                            <img src="./images/NeoQLED.jpg">
+                    </li>
+                    <li class="slideitem">
+                            <div class="textbox">		
+                                <h3>MICRO LED</h3>
+                                <p>지금껏 보지 못했던<br>새로운 빛의 세계를 체험해보세요.</p><br>
+                                <p class="the">더 알아보기</p> <button type="button" class="btn btn-primary">매장찾기</button>
+                            </div>
+                            <img src="./images/MICRO LED.jpg">
+                    </li>
+                    <li class="slideitem">
+                            <div class="textbox">
+                                <h3>미국 주요매체 선정 '최고의 모니터'</h3>
+                                <p>나만의 공간에서 하나로 즐기는 올인원 스크린</p><br>
+                                <button type="button" class="btn btn-primary"> 구매하기</button>
+                            </div>
+                            <img src="./images/스마트모니터.jpg">
+                    </li class="slideitem">
+        
+                    <div class="slide-control">
+                        <div>
+                            <label class="top"><b>TV & 오디오</b></label>
+                            <label for="slide01" class="left">NeoQLED</label>
+                            <label for="slide02" class="middle">MICRO LED</label>
+                            <label for="slide03" class="right">스마트모니터</label>
+                        </div>
+                        <div>
+                            <label class="top"><b>TV & 오디오</b></label>
+                            <label for="slide01" class="left">NeoQLED</label>
+                            <label for="slide02" class="middle">MICRO LED</label>
+                            <label for="slide03" class="right">스마트모니터</label>
+                        </div>
+                        <div>
+                            <label class="top"><b>TV & 오디오</b></label>
+                            <label for="slide01" class="left">NeoQLED</label>
+                            <label for="slide02" class="middle">MICRO LED</label>
+                            <label for="slide03" class="right">스마트모니터</div>
+                        </div>
+                    </div>
+        
+                </ul>
+            </div>
+        </div>
+        
+
+
+        <div class="section2">
+            <input type="radio" name="slide" id="slide04" checked>
+            <input type="radio" name="slide" id="slide05">
+            <input type="radio" name="slide" id="slide06">
+            <input type="radio" name="slide" id="slide07">
+            <input type="radio" name="slide" id="slide08">
+            <input type="radio" name="slide" id="slide09">
+
+            <div class="slidewrap">
+                <ul class="slidelist">
+                    <!-- 슬라이드 영역 -->
+                    <li class="slideitem">
+                        <a>
+                            <div class="textbox01">
+                                <h3>BESPOKE냉장고 Infinite Line</h3>
+                                <p>무한히 변치 않는 나만의 가치</p>
+                                <p class="the"> 더 알아보기</p>
+                                <button class="custom-btn btn-13"><span>Click!</span><span>조합하여 구매하기</span></button>
+                            </div>
+                            <img src="./images/BESPOKE냉장고.jpg">
+
+                        </a>
+                    </li>
+                    <li class="slideitem">
+                        <a>
+                            <div class="textbox">
+                                <h3>BESPOKE 제트I 제트 봇 런칭</h3>
+                                <p>최대 31만원 상당 런칭 혜택으로<br>마무리까지 알아서 끝내주는 제트를 만나보세요</p>
+                                <button class="custom-btn btn-12"><span>Click!</span><span>구매 혜택보기</span></button>
+                            </div>
+                            <img src="./images/제트봇런치.webp">
+                        </a>
+                    </li>
+                    <li class="slideitem">
+                        <a>
+                            <div class="textbox">
+                                <h3>BESPOKE 무풍에어컨 갤러리 런칭</h3>
+                                <p>최대 75만원 상당 혜택으로 올 여름 준비 끝!</p>
+                                <p></p>
+                                <button class="custom-btn btn-12"><span>Click!</span><span>구매 혜택보기</span></button>
+                            </div>
+                            <img src="./images/무풍에어컨.webp">
+                        </a>
+                    </li>
+                    <li class="slideitem">
+                        <a>
+                            <div class="textbox">
+                                <h3>2022 NEW BESPOKE 그랑데 AI 런칭</h3>
+                                <p>세탁, 건조는 물론 위생까지 알아서!<br>최대 13만 상당 런칭 혜택으로 만나보세요.</p>
+                                <button class="custom-btn btn-12"><span>Click!</span><span>구매 혜택보기</span></button>
+                            </div>
+                            <img src="./images/그랑데.webp">
+                        </a>
+                    </li>
+
+                    <li class="slideitem">
+                        <a>
+                            <div class="textbox">
+                                <h3>BESPOKE 큐커</h3>
+                                <p>My 큐커 플랜 삼성카드 약정 가입하면<br>BESPOKE 큐커가 단 5만원에!</p>
+                                <button class="custom-btn btn-12"><span>Click!</span><span>구매하기</span></button>
+                            </div>
+                            <img src="./images/큐커.webp">
+                        </a>
+                    </li>
+                    <li class="slideitem">
+                        <a>
+                            <div class="textbox">
+                                <h3>BESPOKE HOME</h3>
+                                <p>우리집을 비스포크하다</p>
+                                <p>360 컬러 조합하기</p>
+                                <button class="custom-btn btn-12"><span>Click!</span><span>구매 혜택보기</span></button>
+                            </div>
+                            <img src="./images/BESPOKE HOME.jpg">
+                        </a>
+                    </li class="slideitem">
+
+
+                    <div class="slide-control">
+                        <div>
+                            <label for="slide04" class="text01">BESPOKE 냉장고 Infinite Line</label>
+                            <label for="slide05" class="text02">BESPOKE 제트</label>
+                            <label for="slide06" class="text03">BESPOKE 무풍에어컨</label>
+                            <label for="slide07" class="text04">BESPOKE 그랑데</label>
+                            <label for="slide08" class="text05">BESPOKE 큐커</label>
+                            <label for="slide09" class="text06">BESPOKE HOME</label>
+                        </div>
+                        <div>
+                            <label for="slide04" class="text01">BESPOKE 냉장고 Infinite Line</label>
+                            <label for="slide05" class="text02">BESPOKE 제트</label>
+                            <label for="slide06" class="text03">BESPOKE 무풍에어컨</label>
+                            <label for="slide07" class="text04">BESPOKE 그랑데</label>
+                            <label for="slide08" class="text05">BESPOKE 큐커</label>
+                            <label for="slide09" class="text06">BESPOKE HOME</label>
+                        </div>
+                        <div>
+                            <label for="slide04" class="text01">BESPOKE 냉장고 Infinite Line</label>
+                            <label for="slide05" class="text02">BESPOKE 제트</label>
+                            <label for="slide06" class="text03">BESPOKE 무풍에어컨</label>
+                            <label for="slide07" class="text04">BESPOKE 그랑데</label>
+                            <label for="slide08" class="text05">BESPOKE 큐커</label>
+                            <label for="slide09" class="text06">BESPOKE HOME</label>
+                        </div>
+                        <div>
+                            <label for="slide04" class="text01">BESPOKE 냉장고 Infinite Line</label>
+                            <label for="slide05" class="text02">BESPOKE 제트</label>
+                            <label for="slide06" class="text03">BESPOKE 무풍에어컨</label>
+                            <label for="slide07" class="text04">BESPOKE 그랑데</label>
+                            <label for="slide08" class="text05">BESPOKE 큐커</label>
+                            <label for="slide09" class="text06">BESPOKE HOME</label>
+                        </div>
+                        <div>
+                            <label for="slide04" class="text01">BESPOKE 냉장고 Infinite Line</label>
+                            <label for="slide05" class="text02">BESPOKE 제트</label>
+                            <label for="slide06" class="text03">BESPOKE 무풍에어컨</label>
+                            <label for="slide07" class="text04">BESPOKE 그랑데</label>
+                            <label for="slide08" class="text05">BESPOKE 큐커</label>
+                            <label for="slide09" class="text06">BESPOKE HOME</label>
+                        </div>
+                        <div>
+                            <label for="slide04" class="text01">BESPOKE 냉장고 Infinite Line</label>
+                            <label for="slide05" class="text02">BESPOKE 제트</label>
+                            <label for="slide06" class="text03">BESPOKE 무풍에어컨</label>
+                            <label for="slide07" class="text04">BESPOKE 그랑데</label>
+                            <label for="slide08" class="text05">BESPOKE 큐커</label>
+                            <label for="slide09" class="text06">BESPOKE HOME</label>
+                        </div>
+                    </div>
+
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section3">
+            <div class="youmake_wrap">
+                <div class="youmake">#YouMake</div>
+            </div>
+            <div class="tab_content">
+
+                <input type="radio" name="tabmenu" id="tab01" checked>
+                <input type="radio" name="tabmenu" id="tab02">
+                <input type="radio" name="tabmenu" id="tab03">
+                <input type="radio" name="tabmenu" id="tab04">
+
+                <div class="conbox con1"></div>
+                <div class="conbox con2"></div>
+                <div class="conbox con3"></div>
+                <div class="conbox con4"></div>
+
+                <div class="btn">
+                    <label for="tab01" id="tab01_label"></label>
+                    <label for="tab02" id="tab02_label"></label>
+                    <label for="tab03" id="tab03_label"></label>
+                    <label for="tab04" id="tab04_label"></label>
+                </div>
+            </div>
+            <div class="list_style_wrap">
+                <ul class="list_style">
+                    <li id="slide10"><a href="#">01 #YouMake 프로젝트</a>
+                        <p>더 알아보기</p>
+                    </li>
+                </ul>
+                <ul class="list_style">
+                    <li id="slide11"><a href="#">02 #우리집이 영화관이 되는 순간</a>
+                        <p>더 알아보기 </p>
+                    </li>
+                </ul>
+                <ul class="list_style">
+                    <li id="slide12"><a href="#">03 #BESPOKE가 집의 모든 순간을<br>나답게 만드는 방법</a>
+                        <p>더 알아보기 </p>
+                    </li>
+                </ul>
+                <ul class="list_style">
+                    <li id="slide13"><a href="#">04 #Samsung at CE 2022</a>
+                        <p>더 알아보기</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+    </section>
+
+    <div class="wrap footer">
+        <footer>
+
+        </footer>
+    </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $("#slide10").hover(function () {
+                $(".con1").show();
+                $(".con2").hide();
+                $(".con3").hide();
+                $(".con4").hide();
+            });
+            $("#slide11").hover(function () {
+                $(".con1").hide();
+                $(".con2").show();
+                $(".con3").hide();
+                $(".con4").hide();
+            });
+            $("#slide12").hover(function () {
+                $(".con1").hide();
+                $(".con2").hide();
+                $(".con3").show();
+                $(".con4").hide();
+            });
+            $("#slide13").hover(function () {
+                $(".con1").hide();
+                $(".con2").hide();
+                $(".con3").hide();
+                $(".con4").show();
+            });
+
+        });
+
+        $(document).ready(function () {
+            $(".left").click(function () {
+                $("#slide01").hover("checked", true)
+                $("#slide02").hover("checked", false)
+                $("#slide03").hover("checked", false)
+            });
+            $(".middle").click(function () {
+                $("#slide02").hover("checked", false)
+                $("#slide02").hover("checked", true)
+                $("#slide02").hover("checked", false)
+            });
+            $(".left").click(function () {
+                $("#slide03").hover("checked", false)
+                $("#slide03").hover("checked", false)
+                $("#slide03").hover("checked", true)
+            });
+        });
+    </script>
+</body>
+
+</html>
